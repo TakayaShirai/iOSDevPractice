@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  iOSDevPractice
-//
-//  Created by Shirai Takaya on 2024/07/24.
-//
-
 import UIKit
 
 @main
