@@ -34,6 +34,7 @@ class ConcurrencyViewController: UIViewController {
   
   private func setUpSubViews() {
     view.addSubview(doCatchTryThrowsButton)
+    view.addSubview(downloadImageButton)
     
     view.backgroundColor = .systemBackground
     
@@ -41,7 +42,10 @@ class ConcurrencyViewController: UIViewController {
     
     NSLayoutConstraint.activate([
       doCatchTryThrowsButton.topAnchor.constraint(equalTo: layoutGuide.topAnchor),
-      doCatchTryThrowsButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor)
+      doCatchTryThrowsButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+      
+      downloadImageButton.topAnchor.constraint(equalTo: doCatchTryThrowsButton.bottomAnchor),
+      downloadImageButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor)
     ])
   }
   
@@ -51,7 +55,7 @@ class ConcurrencyViewController: UIViewController {
   }
   
   @objc func navigateToDownloadImagesView() {
-    // TODO: https://github.com/TakayaShirai/iOSDevPractice/issues/1
-    // - Create DownloadImagesView to learn how to download images with Async & Await.
+    let downloadImagesWithAsyncView = UIHostingController(rootView: DownloadImagesWithAsyncView())
+    navigationController?.pushViewController(downloadImagesWithAsyncView, animated: true)
   }
 }
