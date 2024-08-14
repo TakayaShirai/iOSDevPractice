@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0429482C651E9C004CF65B /* AsyncAwaitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0429472C651E9C004CF65B /* AsyncAwaitView.swift */; };
+		3B04294A2C651EB7004CF65B /* AsyncAwaitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0429492C651EB7004CF65B /* AsyncAwaitViewModel.swift */; };
 		3B3314F32C539DBE00986EAA /* OBViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3314F22C539DBE00986EAA /* OBViewObserver.swift */; };
 		3B3314F52C53CC0800986EAA /* OBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3314F42C53CC0800986EAA /* OBViewController.swift */; };
 		3B9559EF2C6111750028E9FE /* DoCatchTryThrowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9559EE2C6111750028E9FE /* DoCatchTryThrowsView.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B0429472C651E9C004CF65B /* AsyncAwaitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitView.swift; sourceTree = "<group>"; };
+		3B0429492C651EB7004CF65B /* AsyncAwaitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitViewModel.swift; sourceTree = "<group>"; };
 		3B3314F22C539DBE00986EAA /* OBViewObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBViewObserver.swift; sourceTree = "<group>"; };
 		3B3314F42C53CC0800986EAA /* OBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBViewController.swift; sourceTree = "<group>"; };
 		3B9559EE2C6111750028E9FE /* DoCatchTryThrowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrowsView.swift; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B0429462C651E88004CF65B /* AsyncAwait */ = {
+			isa = PBXGroup;
+			children = (
+				3B0429472C651E9C004CF65B /* AsyncAwaitView.swift */,
+				3B0429492C651EB7004CF65B /* AsyncAwaitViewModel.swift */,
+			);
+			path = AsyncAwait;
+			sourceTree = "<group>";
+		};
 		3B3314F12C539D9400986EAA /* ObservableObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				3BDC44D12C6358BA00D11760 /* ConcurrencyViewController.swift */,
+				3B0429462C651E88004CF65B /* AsyncAwait */,
 				3B9559EC2C6110F60028E9FE /* DoCatchTryThrows */,
 				3BDC44D32C63600C00D11760 /* DownloadImagesWithAsync */,
 			);
@@ -190,9 +204,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B9559EF2C6111750028E9FE /* DoCatchTryThrowsView.swift in Sources */,
+				3B04294A2C651EB7004CF65B /* AsyncAwaitViewModel.swift in Sources */,
 				3B3314F32C539DBE00986EAA /* OBViewObserver.swift in Sources */,
 				3B9559F12C6111CC0028E9FE /* DoCatchTryThrowsViewModel.swift in Sources */,
 				3BD6C4892C50F0150070279B /* AppDelegate.swift in Sources */,
+				3B0429482C651E9C004CF65B /* AsyncAwaitView.swift in Sources */,
 				3B9559F32C6113670028E9FE /* DoCatchTryThrowsDataManager.swift in Sources */,
 				3BDC44D92C63622D00D11760 /* DownloadImageAsyncImageLoader.swift in Sources */,
 				3BD6C48B2C50F0150070279B /* SceneDelegate.swift in Sources */,

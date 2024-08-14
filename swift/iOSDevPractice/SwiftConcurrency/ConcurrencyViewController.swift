@@ -7,6 +7,7 @@ class ConcurrencyViewController: UIViewController {
   private enum LocalizedString {
     static let doCatchTryThrowsButtonTitle = String(localized: "DoCatchTryThrows")
     static let downloadImagesButtonTitle = String(localized: "Download Images")
+    static let asyncAwaitButtonTitle = String(localized: "Async/Await")
   }
   
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -27,6 +28,15 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
   
+  private lazy var asyncAwaitButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.asyncAwaitButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(self, action: #selector(navigateToAsyncAwaitView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -35,6 +45,7 @@ class ConcurrencyViewController: UIViewController {
   private func setUpSubViews() {
     view.addSubview(doCatchTryThrowsButton)
     view.addSubview(downloadImageButton)
+    view.addSubview(asyncAwaitButton)
     
     view.backgroundColor = .systemBackground
     
@@ -45,7 +56,10 @@ class ConcurrencyViewController: UIViewController {
       doCatchTryThrowsButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
       
       downloadImageButton.topAnchor.constraint(equalTo: doCatchTryThrowsButton.bottomAnchor),
-      downloadImageButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor)
+      downloadImageButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+      
+      asyncAwaitButton.topAnchor.constraint(equalTo: downloadImageButton.bottomAnchor),
+      asyncAwaitButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor)
     ])
   }
   
@@ -57,5 +71,10 @@ class ConcurrencyViewController: UIViewController {
   @objc func navigateToDownloadImagesView() {
     let downloadImagesWithAsyncView = UIHostingController(rootView: DownloadImagesWithAsyncView())
     navigationController?.pushViewController(downloadImagesWithAsyncView, animated: true)
+  }
+  
+  @objc func navigateToAsyncAwaitView() {
+    let asyncAwaitView = UIHostingController(rootView: AsyncAwaitView())
+    navigationController?.pushViewController(asyncAwaitView, animated: true)
   }
 }
