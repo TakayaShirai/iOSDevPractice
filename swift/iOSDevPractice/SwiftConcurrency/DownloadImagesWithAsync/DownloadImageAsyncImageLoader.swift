@@ -40,6 +40,5 @@ class DownloadImageAsyncImageLoader {
     } catch {
       throw error
     }
-    
   }
 }
