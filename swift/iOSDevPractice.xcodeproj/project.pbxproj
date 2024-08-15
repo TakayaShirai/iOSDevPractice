@@ -16,6 +16,8 @@
 		3B9559F32C6113670028E9FE /* DoCatchTryThrowsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9559F22C6113670028E9FE /* DoCatchTryThrowsDataManager.swift */; };
 		3B9AE41C2C6CDB2F00E0ABE1 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9AE41B2C6CDB2F00E0ABE1 /* TaskView.swift */; };
 		3B9AE41E2C6CDB3C00E0ABE1 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9AE41D2C6CDB3C00E0ABE1 /* TaskViewModel.swift */; };
+		3BB99EC82C6DCA4000204E51 /* AsyncLetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB99EC72C6DCA4000204E51 /* AsyncLetView.swift */; };
+		3BB99ECA2C6DCA4E00204E51 /* AsyncLetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB99EC92C6DCA4E00204E51 /* AsyncLetViewModel.swift */; };
 		3BD6C4892C50F0150070279B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6C4882C50F0150070279B /* AppDelegate.swift */; };
 		3BD6C48B2C50F0150070279B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6C48A2C50F0150070279B /* SceneDelegate.swift */; };
 		3BD6C4922C50F0160070279B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD6C4912C50F0160070279B /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		3B9559F22C6113670028E9FE /* DoCatchTryThrowsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrowsDataManager.swift; sourceTree = "<group>"; };
 		3B9AE41B2C6CDB2F00E0ABE1 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		3B9AE41D2C6CDB3C00E0ABE1 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		3BB99EC72C6DCA4000204E51 /* AsyncLetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLetView.swift; sourceTree = "<group>"; };
+		3BB99EC92C6DCA4E00204E51 /* AsyncLetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLetViewModel.swift; sourceTree = "<group>"; };
 		3BD6C4852C50F0150070279B /* iOSDevPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDevPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD6C4882C50F0150070279B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BD6C48A2C50F0150070279B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			children = (
 				3BDC44D12C6358BA00D11760 /* ConcurrencyViewController.swift */,
 				3B0429462C651E88004CF65B /* AsyncAwait */,
+				3BB99EC62C6DCA2500204E51 /* AsyncLet */,
 				3B9559EC2C6110F60028E9FE /* DoCatchTryThrows */,
 				3BDC44D32C63600C00D11760 /* DownloadImagesWithAsync */,
 				3B9AE41A2C6CDAFE00E0ABE1 /* Task */,
@@ -106,6 +111,15 @@
 				3B9AE41D2C6CDB3C00E0ABE1 /* TaskViewModel.swift */,
 			);
 			path = Task;
+			sourceTree = "<group>";
+		};
+		3BB99EC62C6DCA2500204E51 /* AsyncLet */ = {
+			isa = PBXGroup;
+			children = (
+				3BB99EC72C6DCA4000204E51 /* AsyncLetView.swift */,
+				3BB99EC92C6DCA4E00204E51 /* AsyncLetViewModel.swift */,
+			);
+			path = AsyncLet;
 			sourceTree = "<group>";
 		};
 		3BD6C47C2C50F0150070279B = {
@@ -220,6 +234,7 @@
 				3B9559EF2C6111750028E9FE /* DoCatchTryThrowsView.swift in Sources */,
 				3B04294A2C651EB7004CF65B /* AsyncAwaitViewModel.swift in Sources */,
 				3B3314F32C539DBE00986EAA /* OBViewObserver.swift in Sources */,
+				3BB99ECA2C6DCA4E00204E51 /* AsyncLetViewModel.swift in Sources */,
 				3B9AE41C2C6CDB2F00E0ABE1 /* TaskView.swift in Sources */,
 				3B9559F12C6111CC0028E9FE /* DoCatchTryThrowsViewModel.swift in Sources */,
 				3BD6C4892C50F0150070279B /* AppDelegate.swift in Sources */,
@@ -229,6 +244,7 @@
 				3BDC44D92C63622D00D11760 /* DownloadImageAsyncImageLoader.swift in Sources */,
 				3BD6C48B2C50F0150070279B /* SceneDelegate.swift in Sources */,
 				3B3314F52C53CC0800986EAA /* OBViewController.swift in Sources */,
+				3BB99EC82C6DCA4000204E51 /* AsyncLetView.swift in Sources */,
 				3BDC44D22C6358BA00D11760 /* ConcurrencyViewController.swift in Sources */,
 				3BDC44D02C63535F00D11760 /* MainViewController.swift in Sources */,
 				3BDC44D52C63603E00D11760 /* DownloadImagesWithAsyncView.swift in Sources */,

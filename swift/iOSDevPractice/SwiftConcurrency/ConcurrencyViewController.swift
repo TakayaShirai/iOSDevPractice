@@ -9,6 +9,7 @@ class ConcurrencyViewController: UIViewController {
     static let downloadImagesButtonTitle = String(localized: "Download Images")
     static let asyncAwaitButtonTitle = String(localized: "Async/Await")
     static let taskButtonTitle = String(localized: "Task")
+    static let asyncLetButtonTitle = String(localized: "Async Let")
   }
 
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -47,6 +48,15 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
 
+  private lazy var asyncLetButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.asyncLetButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(self, action: #selector(navigateToAsyncLetView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -57,6 +67,7 @@ class ConcurrencyViewController: UIViewController {
     view.addSubview(downloadImageButton)
     view.addSubview(asyncAwaitButton)
     view.addSubview(taskButton)
+    view.addSubview(asyncLetButton)
 
     view.backgroundColor = .systemBackground
 
@@ -74,6 +85,9 @@ class ConcurrencyViewController: UIViewController {
 
       taskButton.topAnchor.constraint(equalTo: asyncAwaitButton.bottomAnchor),
       taskButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      asyncLetButton.topAnchor.constraint(equalTo: taskButton.bottomAnchor),
+      asyncLetButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
@@ -95,5 +109,10 @@ class ConcurrencyViewController: UIViewController {
   @objc func navigateToTaskView() {
     let taskHomeView = UIHostingController(rootView: TaskHomeView())
     navigationController?.pushViewController(taskHomeView, animated: true)
+  }
+
+  @objc func navigateToAsyncLetView() {
+    let asyncLetView = UIHostingController(rootView: AsyncLetView())
+    navigationController?.pushViewController(asyncLetView, animated: true)
   }
 }
