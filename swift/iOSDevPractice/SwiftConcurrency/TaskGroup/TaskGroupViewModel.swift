@@ -10,6 +10,8 @@ class TaskGroupViewModel: ObservableObject {
   func getImages() async {
     //    guard  let images = try? await manager.fetchImagesWithAsyncLet() else { return }
     guard let images = try? await manager.fetchImagesWithTaskGroup() else { return }
-    self.images.append(contentsOf: images)
+    await MainActor.run {
+      self.images.append(contentsOf: images)
+    }
   }
 }
