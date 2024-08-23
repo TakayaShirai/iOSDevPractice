@@ -2,6 +2,10 @@ import SwiftUI
 
 struct AsyncLetView: View {
 
+  private enum LayoutConstant {
+    static let imageHeight: CGFloat = 150
+  }
+
   @StateObject private var viewModel = AsyncLetViewModel()
   private let url = URL(string: "https://picsum.photos/200")!
 
@@ -12,7 +16,7 @@ struct AsyncLetView: View {
           Image(uiImage: image)
             .resizable()
             .scaledToFit()
-            .frame(height: 150)
+            .frame(height: LayoutConstant.imageHeight)
         }
       }
     }

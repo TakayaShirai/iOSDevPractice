@@ -10,6 +10,7 @@ class ConcurrencyViewController: UIViewController {
     static let asyncAwaitButtonTitle = String(localized: "Async/Await")
     static let taskButtonTitle = String(localized: "Task")
     static let asyncLetButtonTitle = String(localized: "Async Let")
+    static let taskGroupButtonTitle = String(localized: "TaskGroup")
   }
 
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -57,6 +58,15 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
 
+  private lazy var taskGroupButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.taskGroupButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(self, action: #selector(navigateToTaskGroupView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -68,6 +78,7 @@ class ConcurrencyViewController: UIViewController {
     view.addSubview(asyncAwaitButton)
     view.addSubview(taskButton)
     view.addSubview(asyncLetButton)
+    view.addSubview(taskGroupButton)
 
     view.backgroundColor = .systemBackground
 
@@ -88,6 +99,9 @@ class ConcurrencyViewController: UIViewController {
 
       asyncLetButton.topAnchor.constraint(equalTo: taskButton.bottomAnchor),
       asyncLetButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      taskGroupButton.topAnchor.constraint(equalTo: asyncLetButton.bottomAnchor),
+      taskGroupButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
@@ -114,5 +128,10 @@ class ConcurrencyViewController: UIViewController {
   @objc func navigateToAsyncLetView() {
     let asyncLetView = UIHostingController(rootView: AsyncLetView())
     navigationController?.pushViewController(asyncLetView, animated: true)
+  }
+
+  @objc func navigateToTaskGroupView() {
+    let taskGroupView = UIHostingController(rootView: TaskGroupView())
+    navigationController?.pushViewController(taskGroupView, animated: true)
   }
 }
