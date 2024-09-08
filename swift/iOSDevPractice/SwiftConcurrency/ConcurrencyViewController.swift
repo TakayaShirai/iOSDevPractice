@@ -12,6 +12,7 @@ class ConcurrencyViewController: UIViewController {
     static let asyncLetButtonTitle = String(localized: "Async Let")
     static let taskGroupButtonTitle = String(localized: "TaskGroup")
     static let continuationsButtonTitle = String(localized: "Continuations")
+    static let structClassActorButtonTitle = String(localized: "Struct Class Actor")
   }
 
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -77,6 +78,15 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
 
+  private lazy var structClassActorButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.structClassActorButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(self, action: #selector(navigateToStructClassActorView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -90,6 +100,7 @@ class ConcurrencyViewController: UIViewController {
     view.addSubview(asyncLetButton)
     view.addSubview(taskGroupButton)
     view.addSubview(continuationsButton)
+    view.addSubview(structClassActorButton)
 
     view.backgroundColor = .systemBackground
 
@@ -116,41 +127,49 @@ class ConcurrencyViewController: UIViewController {
 
       continuationsButton.topAnchor.constraint(equalTo: taskGroupButton.bottomAnchor),
       continuationsButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      structClassActorButton.topAnchor.constraint(equalTo: continuationsButton.bottomAnchor),
+      structClassActorButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
   @objc func navigateToDoCatchTryThrowsView() {
-    let doCatchTryThrowsViewController = UIHostingController(rootView: DoCatchTryThrowsView())
-    navigationController?.pushViewController(doCatchTryThrowsViewController, animated: true)
+    let hostingController = UIHostingController(rootView: DoCatchTryThrowsView())
+    navigationController?.pushViewController(hostingController, animated: true)
   }
 
   @objc func navigateToDownloadImagesView() {
-    let downloadImagesWithAsyncView = UIHostingController(rootView: DownloadImagesWithAsyncView())
-    navigationController?.pushViewController(downloadImagesWithAsyncView, animated: true)
+    let hostingController = UIHostingController(rootView: DownloadImagesWithAsyncView())
+    navigationController?.pushViewController(hostingController, animated: true)
   }
 
   @objc func navigateToAsyncAwaitView() {
-    let asyncAwaitView = UIHostingController(rootView: AsyncAwaitView())
-    navigationController?.pushViewController(asyncAwaitView, animated: true)
+    let hostingController = UIHostingController(rootView: AsyncAwaitView())
+    navigationController?.pushViewController(hostingController, animated: true)
   }
 
   @objc func navigateToTaskView() {
-    let taskHomeView = UIHostingController(rootView: TaskHomeView())
-    navigationController?.pushViewController(taskHomeView, animated: true)
+    let hostingController = UIHostingController(rootView: TaskHomeView())
+    navigationController?.pushViewController(hostingController, animated: true)
   }
 
   @objc func navigateToAsyncLetView() {
-    let asyncLetView = UIHostingController(rootView: AsyncLetView())
-    navigationController?.pushViewController(asyncLetView, animated: true)
+    let hostingController = UIHostingController(rootView: AsyncLetView())
+    navigationController?.pushViewController(hostingController, animated: true)
   }
 
   @objc func navigateToTaskGroupView() {
-    let taskGroupView = UIHostingController(rootView: TaskGroupView())
-    navigationController?.pushViewController(taskGroupView, animated: true)
+    let hostingController = UIHostingController(rootView: TaskGroupView())
+    navigationController?.pushViewController(hostingController, animated: true)
   }
 
   @objc func navigateToContinuationsView() {
-    let continuationsView = UIHostingController(rootView: ContinuationsView())
-    navigationController?.pushViewController(continuationsView, animated: true)
+    let hostingController = UIHostingController(rootView: ContinuationsView())
+    navigationController?.pushViewController(hostingController, animated: true)
+  }
+
+  @objc func navigateToStructClassActorView() {
+    let hostingController = UIHostingController(rootView: StructClassActorView())
+    navigationController?.pushViewController(hostingController, animated: true)
   }
 }
