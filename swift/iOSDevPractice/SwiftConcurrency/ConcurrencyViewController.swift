@@ -13,6 +13,7 @@ class ConcurrencyViewController: UIViewController {
     static let taskGroupButtonTitle = String(localized: "TaskGroup")
     static let continuationsButtonTitle = String(localized: "Continuations")
     static let structClassActorButtonTitle = String(localized: "Struct Class Actor")
+    static let actorButtonTitle = String(localized: "Actor Button")
   }
 
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -87,6 +88,15 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
 
+  private lazy var actorButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.actorButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(self, action: #selector(navigateToActorView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -101,6 +111,7 @@ class ConcurrencyViewController: UIViewController {
     view.addSubview(taskGroupButton)
     view.addSubview(continuationsButton)
     view.addSubview(structClassActorButton)
+    view.addSubview(actorButton)
 
     view.backgroundColor = .systemBackground
 
@@ -130,6 +141,9 @@ class ConcurrencyViewController: UIViewController {
 
       structClassActorButton.topAnchor.constraint(equalTo: continuationsButton.bottomAnchor),
       structClassActorButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      actorButton.topAnchor.constraint(equalTo: structClassActorButton.bottomAnchor),
+      actorButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
@@ -170,6 +184,11 @@ class ConcurrencyViewController: UIViewController {
 
   @objc func navigateToStructClassActorView() {
     let hostingController = UIHostingController(rootView: StructClassActorView())
+    navigationController?.pushViewController(hostingController, animated: true)
+  }
+
+  @objc func navigateToActorView() {
+    let hostingController = UIHostingController(rootView: ActorView())
     navigationController?.pushViewController(hostingController, animated: true)
   }
 }
