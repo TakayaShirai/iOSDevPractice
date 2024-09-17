@@ -14,6 +14,7 @@ class ConcurrencyViewController: UIViewController {
     static let continuationsButtonTitle = String(localized: "Continuations")
     static let structClassActorButtonTitle = String(localized: "Struct Class Actor")
     static let actorButtonTitle = String(localized: "Actor Button")
+    static let globalActorButtonTitle = String(localized: "Global Actor")
   }
 
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -97,6 +98,15 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
 
+  private lazy var globalActorButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.globalActorButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(self, action: #selector(navigateToGlobalActorView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -112,6 +122,7 @@ class ConcurrencyViewController: UIViewController {
     view.addSubview(continuationsButton)
     view.addSubview(structClassActorButton)
     view.addSubview(actorButton)
+    view.addSubview(globalActorButton)
 
     view.backgroundColor = .systemBackground
 
@@ -144,6 +155,9 @@ class ConcurrencyViewController: UIViewController {
 
       actorButton.topAnchor.constraint(equalTo: structClassActorButton.bottomAnchor),
       actorButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      globalActorButton.topAnchor.constraint(equalTo: actorButton.bottomAnchor),
+      globalActorButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
@@ -189,6 +203,11 @@ class ConcurrencyViewController: UIViewController {
 
   @objc func navigateToActorView() {
     let hostingController = UIHostingController(rootView: ActorView())
+    navigationController?.pushViewController(hostingController, animated: true)
+  }
+
+  @objc func navigateToGlobalActorView() {
+    let hostingController = UIHostingController(rootView: GlobalActorView())
     navigationController?.pushViewController(hostingController, animated: true)
   }
 }
