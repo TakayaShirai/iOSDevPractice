@@ -15,6 +15,7 @@ class ConcurrencyViewController: UIViewController {
     static let structClassActorButtonTitle = String(localized: "Struct Class Actor")
     static let actorButtonTitle = String(localized: "Actor Button")
     static let globalActorButtonTitle = String(localized: "Global Actor")
+    static let sendableButtonTitle = String(localized: "Sendable")
   }
 
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -107,6 +108,15 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
 
+  private lazy var sendableButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.sendableButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(self, action: #selector(navigateToSendableView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -123,6 +133,7 @@ class ConcurrencyViewController: UIViewController {
     view.addSubview(structClassActorButton)
     view.addSubview(actorButton)
     view.addSubview(globalActorButton)
+    view.addSubview(sendableButton)
 
     view.backgroundColor = .systemBackground
 
@@ -158,6 +169,9 @@ class ConcurrencyViewController: UIViewController {
 
       globalActorButton.topAnchor.constraint(equalTo: actorButton.bottomAnchor),
       globalActorButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      sendableButton.topAnchor.constraint(equalTo: globalActorButton.bottomAnchor),
+      sendableButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
@@ -208,6 +222,11 @@ class ConcurrencyViewController: UIViewController {
 
   @objc func navigateToGlobalActorView() {
     let hostingController = UIHostingController(rootView: GlobalActorView())
+    navigationController?.pushViewController(hostingController, animated: true)
+  }
+
+  @objc func navigateToSendableView() {
+    let hostingController = UIHostingController(rootView: SendableView())
     navigationController?.pushViewController(hostingController, animated: true)
   }
 }

@@ -15,6 +15,11 @@
 		3B7550C52C995B2A008663E5 /* GlobalActorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550C42C995B2A008663E5 /* GlobalActorViewModel.swift */; };
 		3B7550C72C995D6D008663E5 /* MyNewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550C62C995D6D008663E5 /* MyNewDataManager.swift */; };
 		3B7550C92C996714008663E5 /* MyFirstGlobalActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550C82C996714008663E5 /* MyFirstGlobalActor.swift */; };
+		3B7550E62C9C12C6008663E5 /* SendableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550E52C9C12C6008663E5 /* SendableView.swift */; };
+		3B7550E82C9C1421008663E5 /* SendableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550E72C9C1421008663E5 /* SendableViewModel.swift */; };
+		3B7550EA2C9C145F008663E5 /* CurrentUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550E92C9C145F008663E5 /* CurrentUserManager.swift */; };
+		3B7550EC2C9C1A1B008663E5 /* MyUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550EB2C9C1A1B008663E5 /* MyUserInfo.swift */; };
+		3B7550EE2C9C1B55008663E5 /* MyClassUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550ED2C9C1B55008663E5 /* MyClassUserInfo.swift */; };
 		3B875F1C2C8CF9E200B355B5 /* StructClassActorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B875F1B2C8CF9E200B355B5 /* StructClassActorView.swift */; };
 		3B875F1E2C8CFB1200B355B5 /* MyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B875F1D2C8CFB1200B355B5 /* MyStruct.swift */; };
 		3B875F202C8CFECA00B355B5 /* Myclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B875F1F2C8CFECA00B355B5 /* Myclass.swift */; };
@@ -58,6 +63,11 @@
 		3B7550C42C995B2A008663E5 /* GlobalActorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalActorViewModel.swift; sourceTree = "<group>"; };
 		3B7550C62C995D6D008663E5 /* MyNewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNewDataManager.swift; sourceTree = "<group>"; };
 		3B7550C82C996714008663E5 /* MyFirstGlobalActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstGlobalActor.swift; sourceTree = "<group>"; };
+		3B7550E52C9C12C6008663E5 /* SendableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendableView.swift; sourceTree = "<group>"; };
+		3B7550E72C9C1421008663E5 /* SendableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendableViewModel.swift; sourceTree = "<group>"; };
+		3B7550E92C9C145F008663E5 /* CurrentUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserManager.swift; sourceTree = "<group>"; };
+		3B7550EB2C9C1A1B008663E5 /* MyUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUserInfo.swift; sourceTree = "<group>"; };
+		3B7550ED2C9C1B55008663E5 /* MyClassUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassUserInfo.swift; sourceTree = "<group>"; };
 		3B875F1B2C8CF9E200B355B5 /* StructClassActorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructClassActorView.swift; sourceTree = "<group>"; };
 		3B875F1D2C8CFB1200B355B5 /* MyStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStruct.swift; sourceTree = "<group>"; };
 		3B875F1F2C8CFECA00B355B5 /* Myclass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Myclass.swift; sourceTree = "<group>"; };
@@ -134,6 +144,18 @@
 			path = GlobalActor;
 			sourceTree = "<group>";
 		};
+		3B7550E42C9C12B1008663E5 /* Sendable */ = {
+			isa = PBXGroup;
+			children = (
+				3B7550E92C9C145F008663E5 /* CurrentUserManager.swift */,
+				3B7550EB2C9C1A1B008663E5 /* MyUserInfo.swift */,
+				3B7550E52C9C12C6008663E5 /* SendableView.swift */,
+				3B7550E72C9C1421008663E5 /* SendableViewModel.swift */,
+				3B7550ED2C9C1B55008663E5 /* MyClassUserInfo.swift */,
+			);
+			path = Sendable;
+			sourceTree = "<group>";
+		};
 		3B875F1A2C8CF9C100B355B5 /* StructClassActor */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +210,7 @@
 				3B9559EC2C6110F60028E9FE /* DoCatchTryThrows */,
 				3BDC44D32C63600C00D11760 /* DownloadImagesWithAsync */,
 				3B7550C12C995ABE008663E5 /* GlobalActor */,
+				3B7550E42C9C12B1008663E5 /* Sendable */,
 				3B875F1A2C8CF9C100B355B5 /* StructClassActor */,
 				3B9AE41A2C6CDAFE00E0ABE1 /* Task */,
 				3B8FA4FD2C789A0B00FE2E71 /* TaskGroup */,
@@ -337,9 +360,11 @@
 				3B875F1E2C8CFB1200B355B5 /* MyStruct.swift in Sources */,
 				3B9559EF2C6111750028E9FE /* DoCatchTryThrowsView.swift in Sources */,
 				3B04294A2C651EB7004CF65B /* AsyncAwaitViewModel.swift in Sources */,
+				3B7550EE2C9C1B55008663E5 /* MyClassUserInfo.swift in Sources */,
 				3B3314F32C539DBE00986EAA /* OBViewObserver.swift in Sources */,
 				3BB99ECA2C6DCA4E00204E51 /* AsyncLetViewModel.swift in Sources */,
 				3B875F242C8D090E00B355B5 /* MutatingStruct.swift in Sources */,
+				3B7550E62C9C12C6008663E5 /* SendableView.swift in Sources */,
 				3B8FA5032C789BCD00FE2E71 /* TaskGroupDataManager.swift in Sources */,
 				3BCC00912C955BD40063D484 /* BrowseView.swift in Sources */,
 				3B875F262C8D19D600B355B5 /* MyActor.swift in Sources */,
@@ -349,6 +374,8 @@
 				3B7550C72C995D6D008663E5 /* MyNewDataManager.swift in Sources */,
 				3BD6C4892C50F0150070279B /* AppDelegate.swift in Sources */,
 				3B7550C52C995B2A008663E5 /* GlobalActorViewModel.swift in Sources */,
+				3B7550E82C9C1421008663E5 /* SendableViewModel.swift in Sources */,
+				3B7550EC2C9C1A1B008663E5 /* MyUserInfo.swift in Sources */,
 				3B0429482C651E9C004CF65B /* AsyncAwaitView.swift in Sources */,
 				3BCC008F2C955B810063D484 /* HomeView.swift in Sources */,
 				3B875F1C2C8CF9E200B355B5 /* StructClassActorView.swift in Sources */,
@@ -362,6 +389,7 @@
 				3BCC00952C9565B30063D484 /* MyActorDataManager.swift in Sources */,
 				3B875F222C8D06CB00B355B5 /* CustomStruct.swift in Sources */,
 				3B3314F52C53CC0800986EAA /* OBViewController.swift in Sources */,
+				3B7550EA2C9C145F008663E5 /* CurrentUserManager.swift in Sources */,
 				3BB99EC82C6DCA4000204E51 /* AsyncLetView.swift in Sources */,
 				3B875F202C8CFECA00B355B5 /* Myclass.swift in Sources */,
 				3BDC44D22C6358BA00D11760 /* ConcurrencyViewController.swift in Sources */,
