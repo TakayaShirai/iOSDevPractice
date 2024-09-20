@@ -16,6 +16,7 @@ class ConcurrencyViewController: UIViewController {
     static let actorButtonTitle = String(localized: "Actor Button")
     static let globalActorButtonTitle = String(localized: "Global Actor")
     static let sendableButtonTitle = String(localized: "Sendable")
+    static let asyncPublisherButtonTitle = String(localized: "AsyncPublisher")
   }
 
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -117,6 +118,15 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
 
+  private lazy var asyncPublisherButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.asyncPublisherButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(self, action: #selector(navigateToAsyncPublisherView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -134,6 +144,7 @@ class ConcurrencyViewController: UIViewController {
     view.addSubview(actorButton)
     view.addSubview(globalActorButton)
     view.addSubview(sendableButton)
+    view.addSubview(asyncPublisherButton)
 
     view.backgroundColor = .systemBackground
 
@@ -172,6 +183,9 @@ class ConcurrencyViewController: UIViewController {
 
       sendableButton.topAnchor.constraint(equalTo: globalActorButton.bottomAnchor),
       sendableButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      asyncPublisherButton.topAnchor.constraint(equalTo: sendableButton.bottomAnchor),
+      asyncPublisherButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
@@ -227,6 +241,11 @@ class ConcurrencyViewController: UIViewController {
 
   @objc func navigateToSendableView() {
     let hostingController = UIHostingController(rootView: SendableView())
+    navigationController?.pushViewController(hostingController, animated: true)
+  }
+
+  @objc func navigateToAsyncPublisherView() {
+    let hostingController = UIHostingController(rootView: AsyncPublisherView())
     navigationController?.pushViewController(hostingController, animated: true)
   }
 }
