@@ -47,6 +47,9 @@
 		3BCC00912C955BD40063D484 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC00902C955BD40063D484 /* BrowseView.swift */; };
 		3BCC00932C955D5D0063D484 /* MyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC00922C955D5D0063D484 /* MyDataManager.swift */; };
 		3BCC00952C9565B30063D484 /* MyActorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC00942C9565B30063D484 /* MyActorDataManager.swift */; };
+		3BD5392D2CA7745B004CE28D /* StrongWeakReferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5392C2CA7745B004CE28D /* StrongWeakReferencesView.swift */; };
+		3BD5392F2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5392E2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift */; };
+		3BD539312CA77734004CE28D /* StrongWeakReferencesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD539302CA77734004CE28D /* StrongWeakReferencesDataService.swift */; };
 		3BD6C4892C50F0150070279B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6C4882C50F0150070279B /* AppDelegate.swift */; };
 		3BD6C48B2C50F0150070279B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6C48A2C50F0150070279B /* SceneDelegate.swift */; };
 		3BD6C4922C50F0160070279B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD6C4912C50F0160070279B /* Assets.xcassets */; };
@@ -98,6 +101,9 @@
 		3BCC00902C955BD40063D484 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		3BCC00922C955D5D0063D484 /* MyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataManager.swift; sourceTree = "<group>"; };
 		3BCC00942C9565B30063D484 /* MyActorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActorDataManager.swift; sourceTree = "<group>"; };
+		3BD5392C2CA7745B004CE28D /* StrongWeakReferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongWeakReferencesView.swift; sourceTree = "<group>"; };
+		3BD5392E2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongWeakReferencesViewModel.swift; sourceTree = "<group>"; };
+		3BD539302CA77734004CE28D /* StrongWeakReferencesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongWeakReferencesDataService.swift; sourceTree = "<group>"; };
 		3BD6C4852C50F0150070279B /* iOSDevPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDevPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD6C4882C50F0150070279B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BD6C48A2C50F0150070279B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +234,7 @@
 				3BDC44D32C63600C00D11760 /* DownloadImagesWithAsync */,
 				3B7550C12C995ABE008663E5 /* GlobalActor */,
 				3B7550E42C9C12B1008663E5 /* Sendable */,
+				3BD5392A2CA77378004CE28D /* StrongWeakReferences */,
 				3B875F1A2C8CF9C100B355B5 /* StructClassActor */,
 				3B9AE41A2C6CDAFE00E0ABE1 /* Task */,
 				3B8FA4FD2C789A0B00FE2E71 /* TaskGroup */,
@@ -263,6 +270,16 @@
 				3BCC00942C9565B30063D484 /* MyActorDataManager.swift */,
 			);
 			path = Actor;
+			sourceTree = "<group>";
+		};
+		3BD5392A2CA77378004CE28D /* StrongWeakReferences */ = {
+			isa = PBXGroup;
+			children = (
+				3BD5392C2CA7745B004CE28D /* StrongWeakReferencesView.swift */,
+				3BD5392E2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift */,
+				3BD539302CA77734004CE28D /* StrongWeakReferencesDataService.swift */,
+			);
+			path = StrongWeakReferences;
 			sourceTree = "<group>";
 		};
 		3BD6C47C2C50F0150070279B = {
@@ -375,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B875F1E2C8CFB1200B355B5 /* MyStruct.swift in Sources */,
+				3BD5392F2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift in Sources */,
 				3B9559EF2C6111750028E9FE /* DoCatchTryThrowsView.swift in Sources */,
 				3B7550F12C9D0654008663E5 /* AsyncPublisherView.swift in Sources */,
 				3B04294A2C651EB7004CF65B /* AsyncAwaitViewModel.swift in Sources */,
@@ -407,6 +425,7 @@
 				3BD6C48B2C50F0150070279B /* SceneDelegate.swift in Sources */,
 				3BCC00952C9565B30063D484 /* MyActorDataManager.swift in Sources */,
 				3B875F222C8D06CB00B355B5 /* CustomStruct.swift in Sources */,
+				3BD539312CA77734004CE28D /* StrongWeakReferencesDataService.swift in Sources */,
 				3B3314F52C53CC0800986EAA /* OBViewController.swift in Sources */,
 				3B7550F52C9D11D4008663E5 /* AsyncPublisherDataManager.swift in Sources */,
 				3B7550EA2C9C145F008663E5 /* CurrentUserManager.swift in Sources */,
@@ -418,6 +437,7 @@
 				3B7550C32C995ADB008663E5 /* GlobalActorView.swift in Sources */,
 				3BDC44D02C63535F00D11760 /* MainViewController.swift in Sources */,
 				3B8FA5062C78B7FF00FE2E71 /* ContinuationsView.swift in Sources */,
+				3BD5392D2CA7745B004CE28D /* StrongWeakReferencesView.swift in Sources */,
 				3B8FA50A2C78BFD200FE2E71 /* ContinuationsNetworkManager.swift in Sources */,
 				3BDC44D52C63603E00D11760 /* DownloadImagesWithAsyncView.swift in Sources */,
 				3BDC44D72C6360FD00D11760 /* DownloadImagesWithAsyncViewModel.swift in Sources */,

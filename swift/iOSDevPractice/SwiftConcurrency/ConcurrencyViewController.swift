@@ -17,6 +17,7 @@ class ConcurrencyViewController: UIViewController {
     static let globalActorButtonTitle = String(localized: "Global Actor")
     static let sendableButtonTitle = String(localized: "Sendable")
     static let asyncPublisherButtonTitle = String(localized: "AsyncPublisher")
+    static let strongWeakReferencesButtonTitle = String(localized: "Strong & Weak References")
   }
 
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -127,6 +128,16 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
 
+  private lazy var strongWeakReferencesButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.strongWeakReferencesButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(
+      self, action: #selector(navigateToStrongWeakReferencesView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -145,6 +156,7 @@ class ConcurrencyViewController: UIViewController {
     view.addSubview(globalActorButton)
     view.addSubview(sendableButton)
     view.addSubview(asyncPublisherButton)
+    view.addSubview(strongWeakReferencesButton)
 
     view.backgroundColor = .systemBackground
 
@@ -186,6 +198,9 @@ class ConcurrencyViewController: UIViewController {
 
       asyncPublisherButton.topAnchor.constraint(equalTo: sendableButton.bottomAnchor),
       asyncPublisherButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      strongWeakReferencesButton.topAnchor.constraint(equalTo: asyncPublisherButton.bottomAnchor),
+      strongWeakReferencesButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
@@ -246,6 +261,11 @@ class ConcurrencyViewController: UIViewController {
 
   @objc func navigateToAsyncPublisherView() {
     let hostingController = UIHostingController(rootView: AsyncPublisherView())
+    navigationController?.pushViewController(hostingController, animated: true)
+  }
+
+  @objc func navigateToStrongWeakReferencesView() {
+    let hostingController = UIHostingController(rootView: StrongWeakReferencesView())
     navigationController?.pushViewController(hostingController, animated: true)
   }
 }

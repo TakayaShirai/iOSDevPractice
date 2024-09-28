@@ -19,6 +19,7 @@ struct HomeView: View {
     }
     .onAppear {
       let newString = manager.getSavedData()
+      print(newString)
     }
     .onReceive(timer) { _ in
       Task {
