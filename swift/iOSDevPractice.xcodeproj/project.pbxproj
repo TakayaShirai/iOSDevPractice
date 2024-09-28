@@ -50,6 +50,10 @@
 		3BD5392D2CA7745B004CE28D /* StrongWeakReferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5392C2CA7745B004CE28D /* StrongWeakReferencesView.swift */; };
 		3BD5392F2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5392E2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift */; };
 		3BD539312CA77734004CE28D /* StrongWeakReferencesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD539302CA77734004CE28D /* StrongWeakReferencesDataService.swift */; };
+		3BD539342CA7889D004CE28D /* MVVMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD539332CA7889D004CE28D /* MVVMView.swift */; };
+		3BD539362CA788A6004CE28D /* MVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD539352CA788A6004CE28D /* MVVMViewModel.swift */; };
+		3BD539382CA78951004CE28D /* MyManagerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD539372CA78951004CE28D /* MyManagerClass.swift */; };
+		3BD5393A2CA7895E004CE28D /* MyManagerActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD539392CA7895E004CE28D /* MyManagerActor.swift */; };
 		3BD6C4892C50F0150070279B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6C4882C50F0150070279B /* AppDelegate.swift */; };
 		3BD6C48B2C50F0150070279B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6C48A2C50F0150070279B /* SceneDelegate.swift */; };
 		3BD6C4922C50F0160070279B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD6C4912C50F0160070279B /* Assets.xcassets */; };
@@ -104,6 +108,10 @@
 		3BD5392C2CA7745B004CE28D /* StrongWeakReferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongWeakReferencesView.swift; sourceTree = "<group>"; };
 		3BD5392E2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongWeakReferencesViewModel.swift; sourceTree = "<group>"; };
 		3BD539302CA77734004CE28D /* StrongWeakReferencesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongWeakReferencesDataService.swift; sourceTree = "<group>"; };
+		3BD539332CA7889D004CE28D /* MVVMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMView.swift; sourceTree = "<group>"; };
+		3BD539352CA788A6004CE28D /* MVVMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewModel.swift; sourceTree = "<group>"; };
+		3BD539372CA78951004CE28D /* MyManagerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyManagerClass.swift; sourceTree = "<group>"; };
+		3BD539392CA7895E004CE28D /* MyManagerActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyManagerActor.swift; sourceTree = "<group>"; };
 		3BD6C4852C50F0150070279B /* iOSDevPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDevPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD6C4882C50F0150070279B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BD6C48A2C50F0150070279B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,6 +241,7 @@
 				3B9559EC2C6110F60028E9FE /* DoCatchTryThrows */,
 				3BDC44D32C63600C00D11760 /* DownloadImagesWithAsync */,
 				3B7550C12C995ABE008663E5 /* GlobalActor */,
+				3BD539322CA7888B004CE28D /* MVVM */,
 				3B7550E42C9C12B1008663E5 /* Sendable */,
 				3BD5392A2CA77378004CE28D /* StrongWeakReferences */,
 				3B875F1A2C8CF9C100B355B5 /* StructClassActor */,
@@ -275,11 +284,22 @@
 		3BD5392A2CA77378004CE28D /* StrongWeakReferences */ = {
 			isa = PBXGroup;
 			children = (
+				3BD539302CA77734004CE28D /* StrongWeakReferencesDataService.swift */,
 				3BD5392C2CA7745B004CE28D /* StrongWeakReferencesView.swift */,
 				3BD5392E2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift */,
-				3BD539302CA77734004CE28D /* StrongWeakReferencesDataService.swift */,
 			);
 			path = StrongWeakReferences;
+			sourceTree = "<group>";
+		};
+		3BD539322CA7888B004CE28D /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				3BD539332CA7889D004CE28D /* MVVMView.swift */,
+				3BD539352CA788A6004CE28D /* MVVMViewModel.swift */,
+				3BD539392CA7895E004CE28D /* MyManagerActor.swift */,
+				3BD539372CA78951004CE28D /* MyManagerClass.swift */,
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 		3BD6C47C2C50F0150070279B = {
@@ -403,8 +423,10 @@
 				3B875F242C8D090E00B355B5 /* MutatingStruct.swift in Sources */,
 				3B7550E62C9C12C6008663E5 /* SendableView.swift in Sources */,
 				3B8FA5032C789BCD00FE2E71 /* TaskGroupDataManager.swift in Sources */,
+				3BD539382CA78951004CE28D /* MyManagerClass.swift in Sources */,
 				3BCC00912C955BD40063D484 /* BrowseView.swift in Sources */,
 				3B875F262C8D19D600B355B5 /* MyActor.swift in Sources */,
+				3BD5393A2CA7895E004CE28D /* MyManagerActor.swift in Sources */,
 				3B9AE41C2C6CDB2F00E0ABE1 /* TaskView.swift in Sources */,
 				3BCC008D2C9556F60063D484 /* ActorView.swift in Sources */,
 				3B9559F12C6111CC0028E9FE /* DoCatchTryThrowsViewModel.swift in Sources */,
@@ -431,11 +453,13 @@
 				3B7550EA2C9C145F008663E5 /* CurrentUserManager.swift in Sources */,
 				3BB99EC82C6DCA4000204E51 /* AsyncLetView.swift in Sources */,
 				3B875F202C8CFECA00B355B5 /* Myclass.swift in Sources */,
+				3BD539362CA788A6004CE28D /* MVVMViewModel.swift in Sources */,
 				3BDC44D22C6358BA00D11760 /* ConcurrencyViewController.swift in Sources */,
 				3B8FA4FF2C789A2A00FE2E71 /* TaskGroupView.swift in Sources */,
 				3B7550C92C996714008663E5 /* MyFirstGlobalActor.swift in Sources */,
 				3B7550C32C995ADB008663E5 /* GlobalActorView.swift in Sources */,
 				3BDC44D02C63535F00D11760 /* MainViewController.swift in Sources */,
+				3BD539342CA7889D004CE28D /* MVVMView.swift in Sources */,
 				3B8FA5062C78B7FF00FE2E71 /* ContinuationsView.swift in Sources */,
 				3BD5392D2CA7745B004CE28D /* StrongWeakReferencesView.swift in Sources */,
 				3B8FA50A2C78BFD200FE2E71 /* ContinuationsNetworkManager.swift in Sources */,
