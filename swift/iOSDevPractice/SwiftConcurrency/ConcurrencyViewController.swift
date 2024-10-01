@@ -19,6 +19,7 @@ class ConcurrencyViewController: UIViewController {
     static let asyncPublisherButtonTitle = String(localized: "AsyncPublisher")
     static let strongWeakReferencesButtonTitle = String(localized: "Strong & Weak References")
     static let mvvmButtonTitle = String(localized: "MVVM")
+    static let refreshableButtonTitle = String(localized: "Refreshable")
   }
 
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -149,6 +150,16 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
 
+  private lazy var refreshableButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.refreshableButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(
+      self, action: #selector(navigateToRefreshableView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -169,6 +180,7 @@ class ConcurrencyViewController: UIViewController {
     view.addSubview(asyncPublisherButton)
     view.addSubview(strongWeakReferencesButton)
     view.addSubview(mvvmButton)
+    view.addSubview(refreshableButton)
 
     view.backgroundColor = .systemBackground
 
@@ -216,6 +228,9 @@ class ConcurrencyViewController: UIViewController {
 
       mvvmButton.topAnchor.constraint(equalTo: strongWeakReferencesButton.bottomAnchor),
       mvvmButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      refreshableButton.topAnchor.constraint(equalTo: mvvmButton.bottomAnchor),
+      refreshableButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
@@ -286,6 +301,11 @@ class ConcurrencyViewController: UIViewController {
 
   @objc func navigateToMVVMView() {
     let hostingController = UIHostingController(rootView: MVVMView())
+    navigationController?.pushViewController(hostingController, animated: true)
+  }
+
+  @objc func navigateToRefreshableView() {
+    let hostingController = UIHostingController(rootView: RefreshableView())
     navigationController?.pushViewController(hostingController, animated: true)
   }
 }

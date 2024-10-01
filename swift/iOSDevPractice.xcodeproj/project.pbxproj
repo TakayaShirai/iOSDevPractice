@@ -47,6 +47,9 @@
 		3BCC00912C955BD40063D484 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC00902C955BD40063D484 /* BrowseView.swift */; };
 		3BCC00932C955D5D0063D484 /* MyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC00922C955D5D0063D484 /* MyDataManager.swift */; };
 		3BCC00952C9565B30063D484 /* MyActorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC00942C9565B30063D484 /* MyActorDataManager.swift */; };
+		3BD397622CABC87D00E7F27D /* RefreshableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD397612CABC87D00E7F27D /* RefreshableView.swift */; };
+		3BD397642CABC88F00E7F27D /* RefreshableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD397632CABC88F00E7F27D /* RefreshableViewModel.swift */; };
+		3BD397662CABC92500E7F27D /* RefreshableDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD397652CABC92500E7F27D /* RefreshableDataService.swift */; };
 		3BD5392D2CA7745B004CE28D /* StrongWeakReferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5392C2CA7745B004CE28D /* StrongWeakReferencesView.swift */; };
 		3BD5392F2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5392E2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift */; };
 		3BD539312CA77734004CE28D /* StrongWeakReferencesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD539302CA77734004CE28D /* StrongWeakReferencesDataService.swift */; };
@@ -105,6 +108,9 @@
 		3BCC00902C955BD40063D484 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		3BCC00922C955D5D0063D484 /* MyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataManager.swift; sourceTree = "<group>"; };
 		3BCC00942C9565B30063D484 /* MyActorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActorDataManager.swift; sourceTree = "<group>"; };
+		3BD397612CABC87D00E7F27D /* RefreshableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableView.swift; sourceTree = "<group>"; };
+		3BD397632CABC88F00E7F27D /* RefreshableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableViewModel.swift; sourceTree = "<group>"; };
+		3BD397652CABC92500E7F27D /* RefreshableDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableDataService.swift; sourceTree = "<group>"; };
 		3BD5392C2CA7745B004CE28D /* StrongWeakReferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongWeakReferencesView.swift; sourceTree = "<group>"; };
 		3BD5392E2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongWeakReferencesViewModel.swift; sourceTree = "<group>"; };
 		3BD539302CA77734004CE28D /* StrongWeakReferencesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongWeakReferencesDataService.swift; sourceTree = "<group>"; };
@@ -242,6 +248,7 @@
 				3BDC44D32C63600C00D11760 /* DownloadImagesWithAsync */,
 				3B7550C12C995ABE008663E5 /* GlobalActor */,
 				3BD539322CA7888B004CE28D /* MVVM */,
+				3BD397602CABC86D00E7F27D /* Refreshable */,
 				3B7550E42C9C12B1008663E5 /* Sendable */,
 				3BD5392A2CA77378004CE28D /* StrongWeakReferences */,
 				3B875F1A2C8CF9C100B355B5 /* StructClassActor */,
@@ -279,6 +286,16 @@
 				3BCC00942C9565B30063D484 /* MyActorDataManager.swift */,
 			);
 			path = Actor;
+			sourceTree = "<group>";
+		};
+		3BD397602CABC86D00E7F27D /* Refreshable */ = {
+			isa = PBXGroup;
+			children = (
+				3BD397652CABC92500E7F27D /* RefreshableDataService.swift */,
+				3BD397612CABC87D00E7F27D /* RefreshableView.swift */,
+				3BD397632CABC88F00E7F27D /* RefreshableViewModel.swift */,
+			);
+			path = Refreshable;
 			sourceTree = "<group>";
 		};
 		3BD5392A2CA77378004CE28D /* StrongWeakReferences */ = {
@@ -439,6 +456,7 @@
 				3BCC008F2C955B810063D484 /* HomeView.swift in Sources */,
 				3B875F1C2C8CF9E200B355B5 /* StructClassActorView.swift in Sources */,
 				3B9559F32C6113670028E9FE /* DoCatchTryThrowsDataManager.swift in Sources */,
+				3BD397642CABC88F00E7F27D /* RefreshableViewModel.swift in Sources */,
 				3B9AE41E2C6CDB3C00E0ABE1 /* TaskViewModel.swift in Sources */,
 				3BDC44D92C63622D00D11760 /* DownloadImageAsyncImageLoader.swift in Sources */,
 				3B8FA5082C78B81000FE2E71 /* ContinuationsViewModel.swift in Sources */,
@@ -454,11 +472,13 @@
 				3BB99EC82C6DCA4000204E51 /* AsyncLetView.swift in Sources */,
 				3B875F202C8CFECA00B355B5 /* Myclass.swift in Sources */,
 				3BD539362CA788A6004CE28D /* MVVMViewModel.swift in Sources */,
+				3BD397662CABC92500E7F27D /* RefreshableDataService.swift in Sources */,
 				3BDC44D22C6358BA00D11760 /* ConcurrencyViewController.swift in Sources */,
 				3B8FA4FF2C789A2A00FE2E71 /* TaskGroupView.swift in Sources */,
 				3B7550C92C996714008663E5 /* MyFirstGlobalActor.swift in Sources */,
 				3B7550C32C995ADB008663E5 /* GlobalActorView.swift in Sources */,
 				3BDC44D02C63535F00D11760 /* MainViewController.swift in Sources */,
+				3BD397622CABC87D00E7F27D /* RefreshableView.swift in Sources */,
 				3BD539342CA7889D004CE28D /* MVVMView.swift in Sources */,
 				3B8FA5062C78B7FF00FE2E71 /* ContinuationsView.swift in Sources */,
 				3BD5392D2CA7745B004CE28D /* StrongWeakReferencesView.swift in Sources */,
