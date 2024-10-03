@@ -20,6 +20,7 @@ class ConcurrencyViewController: UIViewController {
     static let strongWeakReferencesButtonTitle = String(localized: "Strong & Weak References")
     static let mvvmButtonTitle = String(localized: "MVVM")
     static let refreshableButtonTitle = String(localized: "Refreshable")
+    static let searchableButtonTitle = String(localized: "Searchable")
   }
 
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -160,6 +161,16 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
 
+  private lazy var searchableButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.searchableButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(
+      self, action: #selector(navigateToSearchableView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -181,6 +192,7 @@ class ConcurrencyViewController: UIViewController {
     view.addSubview(strongWeakReferencesButton)
     view.addSubview(mvvmButton)
     view.addSubview(refreshableButton)
+    view.addSubview(searchableButton)
 
     view.backgroundColor = .systemBackground
 
@@ -231,6 +243,9 @@ class ConcurrencyViewController: UIViewController {
 
       refreshableButton.topAnchor.constraint(equalTo: mvvmButton.bottomAnchor),
       refreshableButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      searchableButton.topAnchor.constraint(equalTo: refreshableButton.bottomAnchor),
+      searchableButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
@@ -306,6 +321,11 @@ class ConcurrencyViewController: UIViewController {
 
   @objc func navigateToRefreshableView() {
     let hostingController = UIHostingController(rootView: RefreshableView())
+    navigationController?.pushViewController(hostingController, animated: true)
+  }
+
+  @objc func navigateToSearchableView() {
+    let hostingController = UIHostingController(rootView: SearchableView())
     navigationController?.pushViewController(hostingController, animated: true)
   }
 }
