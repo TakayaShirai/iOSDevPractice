@@ -21,6 +21,7 @@ class ConcurrencyViewController: UIViewController {
     static let mvvmButtonTitle = String(localized: "MVVM")
     static let refreshableButtonTitle = String(localized: "Refreshable")
     static let searchableButtonTitle = String(localized: "Searchable")
+    static let photosPickerButtonTitle = String(localized: "PhotosPicker")
   }
 
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -171,6 +172,16 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
 
+  private lazy var photosPickerButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.photosPickerButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(
+      self, action: #selector(navigateToPhotosPickerView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -193,6 +204,7 @@ class ConcurrencyViewController: UIViewController {
     view.addSubview(mvvmButton)
     view.addSubview(refreshableButton)
     view.addSubview(searchableButton)
+    view.addSubview(photosPickerButton)
 
     view.backgroundColor = .systemBackground
 
@@ -246,6 +258,9 @@ class ConcurrencyViewController: UIViewController {
 
       searchableButton.topAnchor.constraint(equalTo: refreshableButton.bottomAnchor),
       searchableButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      photosPickerButton.topAnchor.constraint(equalTo: searchableButton.bottomAnchor),
+      photosPickerButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
@@ -326,6 +341,11 @@ class ConcurrencyViewController: UIViewController {
 
   @objc func navigateToSearchableView() {
     let hostingController = UIHostingController(rootView: SearchableView())
+    navigationController?.pushViewController(hostingController, animated: true)
+  }
+
+  @objc func navigateToPhotosPickerView() {
+    let hostingController = UIHostingController(rootView: PhotosPickerView())
     navigationController?.pushViewController(hostingController, animated: true)
   }
 }
