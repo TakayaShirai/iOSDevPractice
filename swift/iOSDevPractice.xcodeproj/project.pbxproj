@@ -16,6 +16,9 @@
 		3B64DDE42CB2511400E8D2D7 /* AsyncStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDE32CB2511400E8D2D7 /* AsyncStreamView.swift */; };
 		3B64DDE62CB2512000E8D2D7 /* AsyncStreamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDE52CB2512000E8D2D7 /* AsyncStreamViewModel.swift */; };
 		3B64DDE82CB2625A00E8D2D7 /* AsyncStreamDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDE72CB2625A00E8D2D7 /* AsyncStreamDataManager.swift */; };
+		3B64DDEB2CB2753600E8D2D7 /* ObservableMacroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDEA2CB2753600E8D2D7 /* ObservableMacroView.swift */; };
+		3B64DDED2CB2754300E8D2D7 /* ObservableMacroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDEC2CB2754300E8D2D7 /* ObservableMacroViewModel.swift */; };
+		3B64DDEF2CB27A2E00E8D2D7 /* TitleDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDEE2CB27A2E00E8D2D7 /* TitleDatabase.swift */; };
 		3B7550C32C995ADB008663E5 /* GlobalActorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550C22C995ADB008663E5 /* GlobalActorView.swift */; };
 		3B7550C52C995B2A008663E5 /* GlobalActorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550C42C995B2A008663E5 /* GlobalActorViewModel.swift */; };
 		3B7550C72C995D6D008663E5 /* MyNewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550C62C995D6D008663E5 /* MyNewDataManager.swift */; };
@@ -86,6 +89,9 @@
 		3B64DDE32CB2511400E8D2D7 /* AsyncStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamView.swift; sourceTree = "<group>"; };
 		3B64DDE52CB2512000E8D2D7 /* AsyncStreamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamViewModel.swift; sourceTree = "<group>"; };
 		3B64DDE72CB2625A00E8D2D7 /* AsyncStreamDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamDataManager.swift; sourceTree = "<group>"; };
+		3B64DDEA2CB2753600E8D2D7 /* ObservableMacroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMacroView.swift; sourceTree = "<group>"; };
+		3B64DDEC2CB2754300E8D2D7 /* ObservableMacroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMacroViewModel.swift; sourceTree = "<group>"; };
+		3B64DDEE2CB27A2E00E8D2D7 /* TitleDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDatabase.swift; sourceTree = "<group>"; };
 		3B7550C22C995ADB008663E5 /* GlobalActorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalActorView.swift; sourceTree = "<group>"; };
 		3B7550C42C995B2A008663E5 /* GlobalActorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalActorViewModel.swift; sourceTree = "<group>"; };
 		3B7550C62C995D6D008663E5 /* MyNewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNewDataManager.swift; sourceTree = "<group>"; };
@@ -189,11 +195,21 @@
 		3B64DDE22CB250F500E8D2D7 /* AsyncStream */ = {
 			isa = PBXGroup;
 			children = (
+				3B64DDE72CB2625A00E8D2D7 /* AsyncStreamDataManager.swift */,
 				3B64DDE32CB2511400E8D2D7 /* AsyncStreamView.swift */,
 				3B64DDE52CB2512000E8D2D7 /* AsyncStreamViewModel.swift */,
-				3B64DDE72CB2625A00E8D2D7 /* AsyncStreamDataManager.swift */,
 			);
 			path = AsyncStream;
+			sourceTree = "<group>";
+		};
+		3B64DDE92CB2751D00E8D2D7 /* ObservableMacro */ = {
+			isa = PBXGroup;
+			children = (
+				3B64DDEA2CB2753600E8D2D7 /* ObservableMacroView.swift */,
+				3B64DDEC2CB2754300E8D2D7 /* ObservableMacroViewModel.swift */,
+				3B64DDEE2CB27A2E00E8D2D7 /* TitleDatabase.swift */,
+			);
+			path = ObservableMacro;
 			sourceTree = "<group>";
 		};
 		3B7550C12C995ABE008663E5 /* GlobalActor */ = {
@@ -286,6 +302,7 @@
 				3BDC44D32C63600C00D11760 /* DownloadImagesWithAsync */,
 				3B7550C12C995ABE008663E5 /* GlobalActor */,
 				3BD539322CA7888B004CE28D /* MVVM */,
+				3B64DDE92CB2751D00E8D2D7 /* ObservableMacro */,
 				3B1B332C2CAFD6E200D35FD5 /* PhotosPicker */,
 				3BD397602CABC86D00E7F27D /* Refreshable */,
 				3B9764182CAE06AA007FE8BC /* Searchable */,
@@ -483,6 +500,7 @@
 				3BD5392F2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift in Sources */,
 				3B9559EF2C6111750028E9FE /* DoCatchTryThrowsView.swift in Sources */,
 				3B1B33302CAFD70600D35FD5 /* PhotosPickerViewModel.swift in Sources */,
+				3B64DDEF2CB27A2E00E8D2D7 /* TitleDatabase.swift in Sources */,
 				3B7550F12C9D0654008663E5 /* AsyncPublisherView.swift in Sources */,
 				3B97641A2CAE0780007FE8BC /* SearchableView.swift in Sources */,
 				3B04294A2C651EB7004CF65B /* AsyncAwaitViewModel.swift in Sources */,
@@ -521,6 +539,7 @@
 				3BD6C48B2C50F0150070279B /* SceneDelegate.swift in Sources */,
 				3BCC00952C9565B30063D484 /* MyActorDataManager.swift in Sources */,
 				3B9764202CAE1AEE007FE8BC /* SearchChildView.swift in Sources */,
+				3B64DDEB2CB2753600E8D2D7 /* ObservableMacroView.swift in Sources */,
 				3B875F222C8D06CB00B355B5 /* CustomStruct.swift in Sources */,
 				3BD539312CA77734004CE28D /* StrongWeakReferencesDataService.swift in Sources */,
 				3B3314F52C53CC0800986EAA /* OBViewController.swift in Sources */,
@@ -530,6 +549,7 @@
 				3B875F202C8CFECA00B355B5 /* Myclass.swift in Sources */,
 				3BD539362CA788A6004CE28D /* MVVMViewModel.swift in Sources */,
 				3B97641E2CAE079D007FE8BC /* RestaurantManager.swift in Sources */,
+				3B64DDED2CB2754300E8D2D7 /* ObservableMacroViewModel.swift in Sources */,
 				3BD397662CABC92500E7F27D /* RefreshableDataService.swift in Sources */,
 				3B1B332E2CAFD6FB00D35FD5 /* PhotosPickerView.swift in Sources */,
 				3BDC44D22C6358BA00D11760 /* ConcurrencyViewController.swift in Sources */,

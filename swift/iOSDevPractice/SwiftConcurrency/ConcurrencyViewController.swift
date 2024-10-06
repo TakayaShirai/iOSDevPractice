@@ -23,6 +23,7 @@ class ConcurrencyViewController: UIViewController {
     static let searchableButtonTitle = String(localized: "Searchable")
     static let photosPickerButtonTitle = String(localized: "PhotosPicker")
     static let asyncStreamButtonTitle = String(localized: "AsyncStram")
+    static let observableMacroButtonTitle = String(localized: "Observable Macro")
   }
 
   private lazy var doCatchTryThrowsButton: UIButton = {
@@ -193,6 +194,16 @@ class ConcurrencyViewController: UIViewController {
     return button
   }()
 
+  private lazy var observableMacroButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.observableMacroButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(
+      self, action: #selector(navigateToObservableMacroView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubViews()
@@ -217,6 +228,7 @@ class ConcurrencyViewController: UIViewController {
     view.addSubview(searchableButton)
     view.addSubview(photosPickerButton)
     view.addSubview(asyncStreamButton)
+    view.addSubview(observableMacroButton)
 
     view.backgroundColor = .systemBackground
 
@@ -276,6 +288,9 @@ class ConcurrencyViewController: UIViewController {
 
       asyncStreamButton.topAnchor.constraint(equalTo: photosPickerButton.bottomAnchor),
       asyncStreamButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      observableMacroButton.topAnchor.constraint(equalTo: asyncStreamButton.bottomAnchor),
+      observableMacroButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
@@ -366,6 +381,11 @@ class ConcurrencyViewController: UIViewController {
 
   @objc func navigateToAsyncStreamView() {
     let hostingController = UIHostingController(rootView: AsyncStreamView())
+    navigationController?.pushViewController(hostingController, animated: true)
+  }
+
+  @objc func navigateToObservableMacroView() {
+    let hostingController = UIHostingController(rootView: ObservableMacroView())
     navigationController?.pushViewController(hostingController, animated: true)
   }
 }
