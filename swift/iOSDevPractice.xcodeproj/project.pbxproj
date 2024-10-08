@@ -31,6 +31,8 @@
 		3B7550F12C9D0654008663E5 /* AsyncPublisherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550F02C9D0654008663E5 /* AsyncPublisherView.swift */; };
 		3B7550F32C9D11C2008663E5 /* AsyncPublisherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550F22C9D11C2008663E5 /* AsyncPublisherViewModel.swift */; };
 		3B7550F52C9D11D4008663E5 /* AsyncPublisherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550F42C9D11D4008663E5 /* AsyncPublisherDataManager.swift */; };
+		3B7DAD6E2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DAD6C2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift */; };
+		3B7DAD712CB3A9A10016FED7 /* OpenClosedPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DAD702CB3A9A10016FED7 /* OpenClosedPrinciple.swift */; };
 		3B875F1C2C8CF9E200B355B5 /* StructClassActorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B875F1B2C8CF9E200B355B5 /* StructClassActorView.swift */; };
 		3B875F1E2C8CFB1200B355B5 /* MyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B875F1D2C8CFB1200B355B5 /* MyStruct.swift */; };
 		3B875F202C8CFECA00B355B5 /* Myclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B875F1F2C8CFECA00B355B5 /* Myclass.swift */; };
@@ -77,6 +79,9 @@
 		3BDC44D52C63603E00D11760 /* DownloadImagesWithAsyncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44D42C63603E00D11760 /* DownloadImagesWithAsyncView.swift */; };
 		3BDC44D72C6360FD00D11760 /* DownloadImagesWithAsyncViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44D62C6360FD00D11760 /* DownloadImagesWithAsyncViewModel.swift */; };
 		3BDC44D92C63622D00D11760 /* DownloadImageAsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44D82C63622D00D11760 /* DownloadImageAsyncImageLoader.swift */; };
+		3BE097122CB498F1006B2B6F /* LiskovSubstitutionPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE097112CB498F1006B2B6F /* LiskovSubstitutionPrinciple.swift */; };
+		3BE097142CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE097132CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift */; };
+		3BE097162CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE097152CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +109,8 @@
 		3B7550F02C9D0654008663E5 /* AsyncPublisherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPublisherView.swift; sourceTree = "<group>"; };
 		3B7550F22C9D11C2008663E5 /* AsyncPublisherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPublisherViewModel.swift; sourceTree = "<group>"; };
 		3B7550F42C9D11D4008663E5 /* AsyncPublisherDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPublisherDataManager.swift; sourceTree = "<group>"; };
+		3B7DAD6C2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleResponsibilityPrinciple.swift; sourceTree = "<group>"; };
+		3B7DAD702CB3A9A10016FED7 /* OpenClosedPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenClosedPrinciple.swift; sourceTree = "<group>"; };
 		3B875F1B2C8CF9E200B355B5 /* StructClassActorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructClassActorView.swift; sourceTree = "<group>"; };
 		3B875F1D2C8CFB1200B355B5 /* MyStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStruct.swift; sourceTree = "<group>"; };
 		3B875F1F2C8CFECA00B355B5 /* Myclass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Myclass.swift; sourceTree = "<group>"; };
@@ -152,6 +159,9 @@
 		3BDC44D42C63603E00D11760 /* DownloadImagesWithAsyncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImagesWithAsyncView.swift; sourceTree = "<group>"; };
 		3BDC44D62C6360FD00D11760 /* DownloadImagesWithAsyncViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImagesWithAsyncViewModel.swift; sourceTree = "<group>"; };
 		3BDC44D82C63622D00D11760 /* DownloadImageAsyncImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsyncImageLoader.swift; sourceTree = "<group>"; };
+		3BE097112CB498F1006B2B6F /* LiskovSubstitutionPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiskovSubstitutionPrinciple.swift; sourceTree = "<group>"; };
+		3BE097132CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceSegregationPrinciple.swift; sourceTree = "<group>"; };
+		3BE097152CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInversionPrinciple.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +253,26 @@
 				3B7550F22C9D11C2008663E5 /* AsyncPublisherViewModel.swift */,
 			);
 			path = AsyncPublisher;
+			sourceTree = "<group>";
+		};
+		3B7DAD662CB39C990016FED7 /* DesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				3B7DAD6F2CB3A9850016FED7 /* SolidDesignPrinciples */,
+			);
+			path = DesignPatterns;
+			sourceTree = "<group>";
+		};
+		3B7DAD6F2CB3A9850016FED7 /* SolidDesignPrinciples */ = {
+			isa = PBXGroup;
+			children = (
+				3BE097152CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift */,
+				3BE097132CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift */,
+				3BE097112CB498F1006B2B6F /* LiskovSubstitutionPrinciple.swift */,
+				3B7DAD702CB3A9A10016FED7 /* OpenClosedPrinciple.swift */,
+				3B7DAD6C2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift */,
+			);
+			path = SolidDesignPrinciples;
 			sourceTree = "<group>";
 		};
 		3B875F1A2C8CF9C100B355B5 /* StructClassActor */ = {
@@ -411,6 +441,7 @@
 				3BD6C4882C50F0150070279B /* AppDelegate.swift */,
 				3BD6C48A2C50F0150070279B /* SceneDelegate.swift */,
 				3BDC44CF2C63535F00D11760 /* MainViewController.swift */,
+				3B7DAD662CB39C990016FED7 /* DesignPatterns */,
 				3B3314F12C539D9400986EAA /* ObservableObject */,
 				3B9559ED2C6111310028E9FE /* SwiftConcurrency */,
 			);
@@ -503,12 +534,15 @@
 				3B64DDEF2CB27A2E00E8D2D7 /* TitleDatabase.swift in Sources */,
 				3B7550F12C9D0654008663E5 /* AsyncPublisherView.swift in Sources */,
 				3B97641A2CAE0780007FE8BC /* SearchableView.swift in Sources */,
+				3BE097142CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift in Sources */,
 				3B04294A2C651EB7004CF65B /* AsyncAwaitViewModel.swift in Sources */,
+				3B7DAD712CB3A9A10016FED7 /* OpenClosedPrinciple.swift in Sources */,
 				3B7550F32C9D11C2008663E5 /* AsyncPublisherViewModel.swift in Sources */,
 				3B7550EE2C9C1B55008663E5 /* MyClassUserInfo.swift in Sources */,
 				3B3314F32C539DBE00986EAA /* OBViewObserver.swift in Sources */,
 				3BB99ECA2C6DCA4E00204E51 /* AsyncLetViewModel.swift in Sources */,
 				3B875F242C8D090E00B355B5 /* MutatingStruct.swift in Sources */,
+				3B7DAD6E2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift in Sources */,
 				3B7550E62C9C12C6008663E5 /* SendableView.swift in Sources */,
 				3B8FA5032C789BCD00FE2E71 /* TaskGroupDataManager.swift in Sources */,
 				3BD539382CA78951004CE28D /* MyManagerClass.swift in Sources */,
@@ -531,6 +565,7 @@
 				3B875F1C2C8CF9E200B355B5 /* StructClassActorView.swift in Sources */,
 				3B9559F32C6113670028E9FE /* DoCatchTryThrowsDataManager.swift in Sources */,
 				3BD397642CABC88F00E7F27D /* RefreshableViewModel.swift in Sources */,
+				3BE097122CB498F1006B2B6F /* LiskovSubstitutionPrinciple.swift in Sources */,
 				3B9AE41E2C6CDB3C00E0ABE1 /* TaskViewModel.swift in Sources */,
 				3BDC44D92C63622D00D11760 /* DownloadImageAsyncImageLoader.swift in Sources */,
 				3B8FA5082C78B81000FE2E71 /* ContinuationsViewModel.swift in Sources */,
@@ -565,6 +600,7 @@
 				3B8FA50A2C78BFD200FE2E71 /* ContinuationsNetworkManager.swift in Sources */,
 				3BDC44D52C63603E00D11760 /* DownloadImagesWithAsyncView.swift in Sources */,
 				3BDC44D72C6360FD00D11760 /* DownloadImagesWithAsyncViewModel.swift in Sources */,
+				3BE097162CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

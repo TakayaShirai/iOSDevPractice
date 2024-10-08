@@ -12,7 +12,7 @@ struct HomeView: View {
 
   var body: some View {
     ZStack {
-      Color.gray.opacity(LayoutConstant.grayColorOpacity).ignoresSafeArea()
+      SwiftUI.Color.gray.opacity(LayoutConstant.grayColorOpacity).ignoresSafeArea()
 
       Text(text)
         .font(.headline)
