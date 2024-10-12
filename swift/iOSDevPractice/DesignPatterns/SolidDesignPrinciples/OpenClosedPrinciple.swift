@@ -6,26 +6,26 @@
 //    case green
 //    case blue
 //  }
-//  
+//
 //  enum Size {
 //    case small
 //    case medium
 //    case large
 //    case yuge
 //  }
-//  
+//
 //  class Product {
 //    var name: String
 //    var color: Color
 //    var size: Size
-//    
+//
 //    init(_ name: String, _ color: Color, _ size: Size) {
 //      self.name = name
 //      self.color = color
 //      self.size = size
 //    }
 //  }
-//  
+//
 //  /// Bad example: We can't make a new filter easily and should write whole code when a new filter is needed.
 //  class ProductFilter {
 //    func filterByColor(_ products: [Product], _ color: Color) -> [Product] {
@@ -37,7 +37,7 @@
 //      }
 //      return result
 //    }
-//    
+//
 //    func filterBySize(_ products: [Product], _ size: Size) -> [Product] {
 //      var result = [Product]()
 //      for p in products {
@@ -47,7 +47,7 @@
 //      }
 //      return result
 //    }
-//    
+//
 //    func filterBySizeAndColor(
 //      _ products: [Product],
 //      _ size: Size, _ color: Color
@@ -61,7 +61,7 @@
 //      return result
 //    }
 //  }
-//  
+//
 //  /// Good example with specification: We can create a new filter easily as a protocol is already defined.
 //  /// Open to Expand but close to modify
 //  /// Open Closed Principle helps you close your system for modification, but allow extensions,
@@ -71,13 +71,13 @@
 //    associatedtype T
 //    func isSatisfied(_ item: T) -> Bool
 //  }
-//  
+//
 //  protocol Filter {
 //    associatedtype T
 //    func filter<Spec: Specification>(_ items: [T], _ spec: Spec) -> [T]
 //    where Spec.T == T
 //  }
-//  
+//
 //  class ColorSpecification: Specification {
 //    typealias T = Product
 //    let color: Color
@@ -88,7 +88,7 @@
 //      return item.color == color
 //    }
 //  }
-//  
+//
 //  class SizeSpecification: Specification {
 //    typealias T = Product
 //    let size: Size
@@ -99,7 +99,7 @@
 //      return item.size == size
 //    }
 //  }
-//  
+//
 //  class AndSpecification<
 //    T,
 //    SpecA: Specification,
@@ -116,10 +116,10 @@
 //      return first.isSatisfied(item) && second.isSatisfied(item)
 //    }
 //  }
-//  
+//
 //  class BetterFilter: Filter {
 //    typealias T = Product
-//    
+//
 //    func filter<Spec: Specification>(_ items: [Product], _ spec: Spec)
 //    -> [T] where Spec.T == T
 //    {
@@ -132,26 +132,26 @@
 //     return result
 //    }
 //  }
-//  
+//
 //  func OCPMain() {
 //    let apple = Product("Apple", .green, .small)
 //    let tree = Product("Tree", .green, .large)
 //    let house = Product("House", .blue, .large)
-//    
+//
 //    let products = [apple, tree, house]
-//    
+//
 //    let pf = ProductFilter()
 //    print("Green products (old):")
 //    for p in pf.filterByColor(products, .green) {
 //      print(" - \(p.name) is green")
 //    }
-//    
+//
 //    let bf = BetterFilter()
 //    print("Green products (new):")
 //    for p in bf.filter(products, ColorSpecification(.green)) {
 //      print(" - \(p.name) is green")
 //    }
-//    
+//
 //    print("Large blue items")
 //    for p in bf.filter(
 //      products,
@@ -163,7 +163,7 @@
 //     print(" - \(p.name) is large and blue")
 //    }
 //  }
-//  
+//
 //  //OCPMain()
-//  
+//
 //}

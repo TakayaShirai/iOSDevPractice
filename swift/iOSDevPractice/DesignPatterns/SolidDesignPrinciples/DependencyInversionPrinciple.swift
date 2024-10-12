@@ -16,7 +16,7 @@
 //
 //class Person{
 //  var name = ""
-//  
+//
 //  init(name: String = "") {
 //    self.name = name
 //  }
@@ -26,7 +26,7 @@
 ///// This violates the Dependency Inversion Principle.
 //class Relationships { // low-level
 //  var relations = [(Person, Relationship, Person)]()
-//  
+//
 //  func addParentAndChild(parent p: Person, child c: Person) {
 //    relations.append((p, Relationship.parent, c))
 //    relations.append((c, Relationship.child, p))
@@ -46,11 +46,11 @@
 //  let parent = Person(name: "John")
 //  let child1 = Person(name: "Chris")
 //  let child2 = Person(name: "Matt")
-//  
+//
 //  let relationships = Relationships()
 //  relationships.addParentAndChild(parent: parent, child: child1)
 //  relationships.addParentAndChild(parent: parent, child: child2)
-//  
+//
 //  let _ = Research(relationships)
 //}
 //
@@ -60,12 +60,12 @@
 //
 //class modifiedRelationships: RelationshipsBrowser {
 //  private var relations = [(Person, Relationship, Person)]()
-//  
+//
 //  func addParentAndChild(parent p: Person, child c: Person) {
 //    relations.append((p, Relationship.parent, c))
 //    relations.append((c, Relationship.child, p))
 //  }
-//  
+//
 //  func findAllChildOf(name: String) -> [Person] {
 //    return relations
 //      .filter({

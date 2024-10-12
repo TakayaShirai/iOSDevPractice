@@ -5,7 +5,7 @@
 //{
 //  var _width: Int = 0
 //  var _height: Int = 0
-//  
+//
 //  var width: Int
 //  {
 //    get {
@@ -15,7 +15,7 @@
 //      _width = value
 //    }
 //  }
-//  
+//
 //  var height: Int
 //  {
 //    get {
@@ -25,7 +25,7 @@
 //      _height = value
 //    }
 //  }
-//  
+//
 //  var area: Int {
 //    height * width
 //  }
@@ -54,7 +54,7 @@
 //      _height = value
 //    }
 //  }
-//  
+//
 //  override var width: Int
 //  {
 //    get { return _width }

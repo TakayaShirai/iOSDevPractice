@@ -7,7 +7,7 @@
 ///// How would you do this?
 //
 //class Document {
-//  
+//
 //}
 //
 ///// You can create a protocol for documents but you can't make a machine like it has only a print function as it is pretty old machine.
@@ -21,11 +21,11 @@
 //  func print(_ d: Document) {
 //    // OK
 //  }
-//  
+//
 //  func scan(_ d: Document) {
 //    // OK
 //  }
-//  
+//
 //  func fax(_ d: Document) {
 //    // OK
 //  }
@@ -35,13 +35,13 @@
 //  func print(_ d: Document) {
 //    // OK
 //  }
-//  
+//
 //  /// we do need to define this, but we can't.
 //  /// How do we fix this?
 //  func scan(_ d: Document) {
 //    // NG
 //  }
-//  
+//
 //  func fax(_ d: Document) {
 //    // NG
 //  }
@@ -76,7 +76,7 @@
 //  func print(_ d: Document) {
 //    // OK
 //  }
-//  
+//
 //  func scan(_ d: Document) {
 //    // OK
 //  }
@@ -88,20 +88,20 @@
 //class MultiFunctionMachine: MultiFunctionDevice {
 //  let printer: Printer
 //  let scanner: Scanner
-//  
+//
 //  init(printer: Printer, scanner: Scanner) {
 //    self.printer = printer
 //    self.scanner = scanner
 //  }
-//  
+//
 //  func print(_ d: Document) {
 //    printer.print(d) // Decorater
 //  }
-//  
+//
 //  func scan(_ d: Document) {
 //    // OK
 //  }
-//  
+//
 //  func fax(d: Document) {
 //    //OK
 //  }
