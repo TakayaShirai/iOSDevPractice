@@ -13,6 +13,8 @@
 		3B1B33302CAFD70600D35FD5 /* PhotosPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1B332F2CAFD70600D35FD5 /* PhotosPickerViewModel.swift */; };
 		3B3314F32C539DBE00986EAA /* OBViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3314F22C539DBE00986EAA /* OBViewObserver.swift */; };
 		3B3314F52C53CC0800986EAA /* OBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3314F42C53CC0800986EAA /* OBViewController.swift */; };
+		3B44B5FB2CBC55B60067A2C2 /* InnerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B44B5FA2CBC55B30067A2C2 /* InnerFactory.swift */; };
+		3B44B5FF2CBC5B810067A2C2 /* AbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B44B5FE2CBC5B760067A2C2 /* AbstractFactory.swift */; };
 		3B64DDE42CB2511400E8D2D7 /* AsyncStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDE32CB2511400E8D2D7 /* AsyncStreamView.swift */; };
 		3B64DDE62CB2512000E8D2D7 /* AsyncStreamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDE52CB2512000E8D2D7 /* AsyncStreamViewModel.swift */; };
 		3B64DDE82CB2625A00E8D2D7 /* AsyncStreamDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDE72CB2625A00E8D2D7 /* AsyncStreamDataManager.swift */; };
@@ -93,6 +95,8 @@
 		3B1B332F2CAFD70600D35FD5 /* PhotosPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerViewModel.swift; sourceTree = "<group>"; };
 		3B3314F22C539DBE00986EAA /* OBViewObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBViewObserver.swift; sourceTree = "<group>"; };
 		3B3314F42C53CC0800986EAA /* OBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBViewController.swift; sourceTree = "<group>"; };
+		3B44B5FA2CBC55B30067A2C2 /* InnerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerFactory.swift; sourceTree = "<group>"; };
+		3B44B5FE2CBC5B760067A2C2 /* AbstractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractFactory.swift; sourceTree = "<group>"; };
 		3B64DDE32CB2511400E8D2D7 /* AsyncStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamView.swift; sourceTree = "<group>"; };
 		3B64DDE52CB2512000E8D2D7 /* AsyncStreamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamViewModel.swift; sourceTree = "<group>"; };
 		3B64DDE72CB2625A00E8D2D7 /* AsyncStreamDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamDataManager.swift; sourceTree = "<group>"; };
@@ -206,6 +210,15 @@
 			path = ObservableObject;
 			sourceTree = "<group>";
 		};
+		3B44B5F92CBC55950067A2C2 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3B44B5FE2CBC5B760067A2C2 /* AbstractFactory.swift */,
+				3B44B5FA2CBC55B30067A2C2 /* InnerFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		3B64DDE22CB250F500E8D2D7 /* AsyncStream */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				3BB87F5C2CB9E2A000853E8E /* Builder */,
+				3B44B5F92CBC55950067A2C2 /* Factory */,
 				3B7DAD6F2CB3A9850016FED7 /* SolidDesignPrinciples */,
 			);
 			path = DesignPatterns;
@@ -541,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B44B5FF2CBC5B810067A2C2 /* AbstractFactory.swift in Sources */,
 				3B875F1E2C8CFB1200B355B5 /* MyStruct.swift in Sources */,
 				3BD5392F2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift in Sources */,
 				3B9559EF2C6111750028E9FE /* DoCatchTryThrowsView.swift in Sources */,
@@ -554,6 +569,7 @@
 				3B7550F32C9D11C2008663E5 /* AsyncPublisherViewModel.swift in Sources */,
 				3B7550EE2C9C1B55008663E5 /* MyClassUserInfo.swift in Sources */,
 				3B3314F32C539DBE00986EAA /* OBViewObserver.swift in Sources */,
+				3B44B5FB2CBC55B60067A2C2 /* InnerFactory.swift in Sources */,
 				3BB99ECA2C6DCA4E00204E51 /* AsyncLetViewModel.swift in Sources */,
 				3B875F242C8D090E00B355B5 /* MutatingStruct.swift in Sources */,
 				3B7DAD6E2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift in Sources */,
