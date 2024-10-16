@@ -78,6 +78,7 @@
 		3BD6C4892C50F0150070279B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6C4882C50F0150070279B /* AppDelegate.swift */; };
 		3BD6C48B2C50F0150070279B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6C48A2C50F0150070279B /* SceneDelegate.swift */; };
 		3BD6C4922C50F0160070279B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD6C4912C50F0160070279B /* Assets.xcassets */; };
+		3BD94ECB2CBF3A540060B681 /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD94ECA2CBF3A4F0060B681 /* Prototype.swift */; };
 		3BDC44D02C63535F00D11760 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44CF2C63535F00D11760 /* MainViewController.swift */; };
 		3BDC44D22C6358BA00D11760 /* ConcurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44D12C6358BA00D11760 /* ConcurrencyViewController.swift */; };
 		3BDC44D52C63603E00D11760 /* DownloadImagesWithAsyncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44D42C63603E00D11760 /* DownloadImagesWithAsyncView.swift */; };
@@ -162,6 +163,7 @@
 		3BD6C48A2C50F0150070279B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3BD6C4912C50F0160070279B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BD6C4962C50F0160070279B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BD94ECA2CBF3A4F0060B681 /* Prototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototype.swift; sourceTree = "<group>"; };
 		3BDC44CF2C63535F00D11760 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3BDC44D12C6358BA00D11760 /* ConcurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyViewController.swift; sourceTree = "<group>"; };
 		3BDC44D42C63603E00D11760 /* DownloadImagesWithAsyncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImagesWithAsyncView.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			children = (
 				3BB87F5C2CB9E2A000853E8E /* Builder */,
 				3B44B5F92CBC55950067A2C2 /* Factory */,
+				3BD94EC92CBF1A4C0060B681 /* Prototype */,
 				3B7DAD6F2CB3A9850016FED7 /* SolidDesignPrinciples */,
 			);
 			path = DesignPatterns;
@@ -476,6 +479,14 @@
 			path = iOSDevPractice;
 			sourceTree = "<group>";
 		};
+		3BD94EC92CBF1A4C0060B681 /* Prototype */ = {
+			isa = PBXGroup;
+			children = (
+				3BD94ECA2CBF3A4F0060B681 /* Prototype.swift */,
+			);
+			path = Prototype;
+			sourceTree = "<group>";
+		};
 		3BDC44D32C63600C00D11760 /* DownloadImagesWithAsync */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +607,7 @@
 				3B9559F32C6113670028E9FE /* DoCatchTryThrowsDataManager.swift in Sources */,
 				3BD397642CABC88F00E7F27D /* RefreshableViewModel.swift in Sources */,
 				3BE097122CB498F1006B2B6F /* LiskovSubstitutionPrinciple.swift in Sources */,
+				3BD94ECB2CBF3A540060B681 /* Prototype.swift in Sources */,
 				3B9AE41E2C6CDB3C00E0ABE1 /* TaskViewModel.swift in Sources */,
 				3BDC44D92C63622D00D11760 /* DownloadImageAsyncImageLoader.swift in Sources */,
 				3B8FA5082C78B81000FE2E71 /* ContinuationsViewModel.swift in Sources */,
