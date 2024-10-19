@@ -65,6 +65,7 @@
 		3BCC00912C955BD40063D484 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC00902C955BD40063D484 /* BrowseView.swift */; };
 		3BCC00932C955D5D0063D484 /* MyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC00922C955D5D0063D484 /* MyDataManager.swift */; };
 		3BCC00952C9565B30063D484 /* MyActorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC00942C9565B30063D484 /* MyActorDataManager.swift */; };
+		3BCF6FB82CC329F1008FE153 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCF6FB72CC329EE008FE153 /* Bridge.swift */; };
 		3BD397622CABC87D00E7F27D /* RefreshableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD397612CABC87D00E7F27D /* RefreshableView.swift */; };
 		3BD397642CABC88F00E7F27D /* RefreshableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD397632CABC88F00E7F27D /* RefreshableViewModel.swift */; };
 		3BD397662CABC92500E7F27D /* RefreshableDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD397652CABC92500E7F27D /* RefreshableDataService.swift */; };
@@ -162,6 +163,7 @@
 		3BCC00902C955BD40063D484 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		3BCC00922C955D5D0063D484 /* MyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataManager.swift; sourceTree = "<group>"; };
 		3BCC00942C9565B30063D484 /* MyActorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActorDataManager.swift; sourceTree = "<group>"; };
+		3BCF6FB72CC329EE008FE153 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		3BD397612CABC87D00E7F27D /* RefreshableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableView.swift; sourceTree = "<group>"; };
 		3BD397632CABC88F00E7F27D /* RefreshableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableViewModel.swift; sourceTree = "<group>"; };
 		3BD397652CABC92500E7F27D /* RefreshableDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableDataService.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				3BE83C492CC23B5900AB5CB7 /* Adapter */,
+				3BCF6FB62CC329DB008FE153 /* Bridge */,
 				3BB87F5C2CB9E2A000853E8E /* Builder */,
 				3B44B5F92CBC55950067A2C2 /* Factory */,
 				3BD94EC92CBF1A4C0060B681 /* Prototype */,
@@ -443,6 +446,14 @@
 				3BCC00942C9565B30063D484 /* MyActorDataManager.swift */,
 			);
 			path = Actor;
+			sourceTree = "<group>";
+		};
+		3BCF6FB62CC329DB008FE153 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				3BCF6FB72CC329EE008FE153 /* Bridge.swift */,
+			);
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 		3BD397602CABC86D00E7F27D /* Refreshable */ = {
@@ -671,6 +682,7 @@
 				3BCC00912C955BD40063D484 /* BrowseView.swift in Sources */,
 				3B64DDE82CB2625A00E8D2D7 /* AsyncStreamDataManager.swift in Sources */,
 				3B875F262C8D19D600B355B5 /* MyActor.swift in Sources */,
+				3BCF6FB82CC329F1008FE153 /* Bridge.swift in Sources */,
 				3BD5393A2CA7895E004CE28D /* MyManagerActor.swift in Sources */,
 				3B9AE41C2C6CDB2F00E0ABE1 /* TaskView.swift in Sources */,
 				3BE83C4B2CC23B6500AB5CB7 /* Adapter.swift in Sources */,
