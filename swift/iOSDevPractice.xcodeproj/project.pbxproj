@@ -52,6 +52,10 @@
 		3B9559F32C6113670028E9FE /* DoCatchTryThrowsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9559F22C6113670028E9FE /* DoCatchTryThrowsDataManager.swift */; };
 		3B975D512CC5860000893EA2 /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B975D502CC585F900893EA2 /* Composite.swift */; };
 		3B975D542CC58ABB00893EA2 /* NeuralNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B975D532CC58AB000893EA2 /* NeuralNetworks.swift */; };
+		3B975D572CC7436500893EA2 /* SimplestDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B975D562CC7436000893EA2 /* SimplestDecorator.swift */; };
+		3B975D592CC773CA00893EA2 /* MultipleInheritanceDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B975D582CC773C100893EA2 /* MultipleInheritanceDecorator.swift */; };
+		3B975D5B2CC7750B00893EA2 /* DynamicDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B975D5A2CC7750600893EA2 /* DynamicDecorator.swift */; };
+		3B975D5D2CC7751A00893EA2 /* StaticDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B975D5C2CC7751500893EA2 /* StaticDecorator.swift */; };
 		3B97641A2CAE0780007FE8BC /* SearchableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9764192CAE0780007FE8BC /* SearchableView.swift */; };
 		3B97641C2CAE078B007FE8BC /* SearchableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B97641B2CAE078B007FE8BC /* SearchableViewModel.swift */; };
 		3B97641E2CAE079D007FE8BC /* RestaurantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B97641D2CAE079D007FE8BC /* RestaurantManager.swift */; };
@@ -152,6 +156,10 @@
 		3B9559F22C6113670028E9FE /* DoCatchTryThrowsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrowsDataManager.swift; sourceTree = "<group>"; };
 		3B975D502CC585F900893EA2 /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
 		3B975D532CC58AB000893EA2 /* NeuralNetworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuralNetworks.swift; sourceTree = "<group>"; };
+		3B975D562CC7436000893EA2 /* SimplestDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplestDecorator.swift; sourceTree = "<group>"; };
+		3B975D582CC773C100893EA2 /* MultipleInheritanceDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleInheritanceDecorator.swift; sourceTree = "<group>"; };
+		3B975D5A2CC7750600893EA2 /* DynamicDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicDecorator.swift; sourceTree = "<group>"; };
+		3B975D5C2CC7751500893EA2 /* StaticDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDecorator.swift; sourceTree = "<group>"; };
 		3B9764192CAE0780007FE8BC /* SearchableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableView.swift; sourceTree = "<group>"; };
 		3B97641B2CAE078B007FE8BC /* SearchableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableViewModel.swift; sourceTree = "<group>"; };
 		3B97641D2CAE079D007FE8BC /* RestaurantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantManager.swift; sourceTree = "<group>"; };
@@ -313,6 +321,7 @@
 				3BCF6FB62CC329DB008FE153 /* Bridge */,
 				3BB87F5C2CB9E2A000853E8E /* Builder */,
 				3B975D522CC5860400893EA2 /* Composite */,
+				3B975D552CC7435700893EA2 /* Decorator */,
 				3B44B5F92CBC55950067A2C2 /* Factory */,
 				3BD94EC92CBF1A4C0060B681 /* Prototype */,
 				3BD94ECC2CC07E620060B681 /* Singleton */,
@@ -410,6 +419,17 @@
 				3B975D532CC58AB000893EA2 /* NeuralNetworks.swift */,
 			);
 			path = Composite;
+			sourceTree = "<group>";
+		};
+		3B975D552CC7435700893EA2 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				3B975D5A2CC7750600893EA2 /* DynamicDecorator.swift */,
+				3B975D582CC773C100893EA2 /* MultipleInheritanceDecorator.swift */,
+				3B975D562CC7436000893EA2 /* SimplestDecorator.swift */,
+				3B975D5C2CC7751500893EA2 /* StaticDecorator.swift */,
+			);
+			path = Decorator;
 			sourceTree = "<group>";
 		};
 		3B9764182CAE06AA007FE8BC /* Searchable */ = {
@@ -672,8 +692,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B44B5FF2CBC5B810067A2C2 /* AbstractFactory.swift in Sources */,
+				3B975D5B2CC7750B00893EA2 /* DynamicDecorator.swift in Sources */,
 				3B875F1E2C8CFB1200B355B5 /* MyStruct.swift in Sources */,
 				3BD5392F2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift in Sources */,
+				3B975D5D2CC7751A00893EA2 /* StaticDecorator.swift in Sources */,
 				3B9559EF2C6111750028E9FE /* DoCatchTryThrowsView.swift in Sources */,
 				3B1B33302CAFD70600D35FD5 /* PhotosPickerViewModel.swift in Sources */,
 				3B64DDEF2CB27A2E00E8D2D7 /* TitleDatabase.swift in Sources */,
@@ -712,6 +734,7 @@
 				3B0429482C651E9C004CF65B /* AsyncAwaitView.swift in Sources */,
 				3B97641C2CAE078B007FE8BC /* SearchableViewModel.swift in Sources */,
 				3BCC008F2C955B810063D484 /* HomeView.swift in Sources */,
+				3B975D572CC7436500893EA2 /* SimplestDecorator.swift in Sources */,
 				3B875F1C2C8CF9E200B355B5 /* StructClassActorView.swift in Sources */,
 				3B9559F32C6113670028E9FE /* DoCatchTryThrowsDataManager.swift in Sources */,
 				3BD397642CABC88F00E7F27D /* RefreshableViewModel.swift in Sources */,
@@ -734,6 +757,7 @@
 				3B7550EA2C9C145F008663E5 /* CurrentUserManager.swift in Sources */,
 				3BB99EC82C6DCA4000204E51 /* AsyncLetView.swift in Sources */,
 				3B875F202C8CFECA00B355B5 /* Myclass.swift in Sources */,
+				3B975D592CC773CA00893EA2 /* MultipleInheritanceDecorator.swift in Sources */,
 				3BD539362CA788A6004CE28D /* MVVMViewModel.swift in Sources */,
 				3B97641E2CAE079D007FE8BC /* RestaurantManager.swift in Sources */,
 				3B64DDED2CB2754300E8D2D7 /* ObservableMacroViewModel.swift in Sources */,
