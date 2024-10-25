@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B0429482C651E9C004CF65B /* AsyncAwaitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0429472C651E9C004CF65B /* AsyncAwaitView.swift */; };
 		3B04294A2C651EB7004CF65B /* AsyncAwaitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0429492C651EB7004CF65B /* AsyncAwaitViewModel.swift */; };
+		3B12D9892CCA1078009BB8DE /* Façade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B12D9882CCA1074009BB8DE /* Façade.swift */; };
 		3B1B332E2CAFD6FB00D35FD5 /* PhotosPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1B332D2CAFD6FB00D35FD5 /* PhotosPickerView.swift */; };
 		3B1B33302CAFD70600D35FD5 /* PhotosPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1B332F2CAFD70600D35FD5 /* PhotosPickerViewModel.swift */; };
 		3B3314F32C539DBE00986EAA /* OBViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3314F22C539DBE00986EAA /* OBViewObserver.swift */; };
@@ -113,6 +114,7 @@
 /* Begin PBXFileReference section */
 		3B0429472C651E9C004CF65B /* AsyncAwaitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitView.swift; sourceTree = "<group>"; };
 		3B0429492C651EB7004CF65B /* AsyncAwaitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitViewModel.swift; sourceTree = "<group>"; };
+		3B12D9882CCA1074009BB8DE /* Façade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Façade.swift"; sourceTree = "<group>"; };
 		3B1B332D2CAFD6FB00D35FD5 /* PhotosPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerView.swift; sourceTree = "<group>"; };
 		3B1B332F2CAFD70600D35FD5 /* PhotosPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerViewModel.swift; sourceTree = "<group>"; };
 		3B3314F22C539DBE00986EAA /* OBViewObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBViewObserver.swift; sourceTree = "<group>"; };
@@ -234,6 +236,15 @@
 			path = AsyncAwait;
 			sourceTree = "<group>";
 		};
+		3B12D9872CCA1060009BB8DE /* Façade */ = {
+			isa = PBXGroup;
+			children = (
+				3B12D9882CCA1074009BB8DE /* Façade.swift */,
+			);
+			name = "Façade";
+			path = "Façade";
+			sourceTree = "<group>";
+		};
 		3B1B332C2CAFD6E200D35FD5 /* PhotosPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +333,7 @@
 				3BB87F5C2CB9E2A000853E8E /* Builder */,
 				3B975D522CC5860400893EA2 /* Composite */,
 				3B975D552CC7435700893EA2 /* Decorator */,
+				3B12D9872CCA1060009BB8DE /* Façade */,
 				3B44B5F92CBC55950067A2C2 /* Factory */,
 				3BD94EC92CBF1A4C0060B681 /* Prototype */,
 				3BD94ECC2CC07E620060B681 /* Singleton */,
@@ -757,6 +769,7 @@
 				3B7550EA2C9C145F008663E5 /* CurrentUserManager.swift in Sources */,
 				3BB99EC82C6DCA4000204E51 /* AsyncLetView.swift in Sources */,
 				3B875F202C8CFECA00B355B5 /* Myclass.swift in Sources */,
+				3B12D9892CCA1078009BB8DE /* Façade.swift in Sources */,
 				3B975D592CC773CA00893EA2 /* MultipleInheritanceDecorator.swift in Sources */,
 				3BD539362CA788A6004CE28D /* MVVMViewModel.swift in Sources */,
 				3B97641E2CAE079D007FE8BC /* RestaurantManager.swift in Sources */,
