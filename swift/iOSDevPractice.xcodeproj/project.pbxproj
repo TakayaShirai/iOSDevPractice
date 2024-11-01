@@ -18,6 +18,8 @@
 		3B3314F52C53CC0800986EAA /* OBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3314F42C53CC0800986EAA /* OBViewController.swift */; };
 		3B44B5FB2CBC55B60067A2C2 /* InnerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B44B5FA2CBC55B30067A2C2 /* InnerFactory.swift */; };
 		3B44B5FF2CBC5B810067A2C2 /* AbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B44B5FE2CBC5B760067A2C2 /* AbstractFactory.swift */; };
+		3B5EBEC72CD58B0300064C1F /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EBEC62CD58B0100064C1F /* Proxy.swift */; };
+		3B5EBEC92CD58E2D00064C1F /* PropertyProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EBEC82CD58E2700064C1F /* PropertyProxy.swift */; };
 		3B64DDE42CB2511400E8D2D7 /* AsyncStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDE32CB2511400E8D2D7 /* AsyncStreamView.swift */; };
 		3B64DDE62CB2512000E8D2D7 /* AsyncStreamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDE52CB2512000E8D2D7 /* AsyncStreamViewModel.swift */; };
 		3B64DDE82CB2625A00E8D2D7 /* AsyncStreamDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDE72CB2625A00E8D2D7 /* AsyncStreamDataManager.swift */; };
@@ -125,6 +127,8 @@
 		3B3314F42C53CC0800986EAA /* OBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBViewController.swift; sourceTree = "<group>"; };
 		3B44B5FA2CBC55B30067A2C2 /* InnerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerFactory.swift; sourceTree = "<group>"; };
 		3B44B5FE2CBC5B760067A2C2 /* AbstractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractFactory.swift; sourceTree = "<group>"; };
+		3B5EBEC62CD58B0100064C1F /* Proxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
+		3B5EBEC82CD58E2700064C1F /* PropertyProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyProxy.swift; sourceTree = "<group>"; };
 		3B64DDE32CB2511400E8D2D7 /* AsyncStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamView.swift; sourceTree = "<group>"; };
 		3B64DDE52CB2512000E8D2D7 /* AsyncStreamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamViewModel.swift; sourceTree = "<group>"; };
 		3B64DDE72CB2625A00E8D2D7 /* AsyncStreamDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamDataManager.swift; sourceTree = "<group>"; };
@@ -285,6 +289,15 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
+		3B5EBEC52CD58AF900064C1F /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				3B5EBEC82CD58E2700064C1F /* PropertyProxy.swift */,
+				3B5EBEC62CD58B0100064C1F /* Proxy.swift */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
 		3B64DDE22CB250F500E8D2D7 /* AsyncStream */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +363,7 @@
 				3B44B5F92CBC55950067A2C2 /* Factory */,
 				3B210C532CCC23DC00C621C2 /* Flyweight */,
 				3BD94EC92CBF1A4C0060B681 /* Prototype */,
+				3B5EBEC52CD58AF900064C1F /* Proxy */,
 				3BD94ECC2CC07E620060B681 /* Singleton */,
 				3B7DAD6F2CB3A9850016FED7 /* SolidDesignPrinciples */,
 			);
@@ -751,6 +765,7 @@
 				3B9AE41C2C6CDB2F00E0ABE1 /* TaskView.swift in Sources */,
 				3BE83C4B2CC23B6500AB5CB7 /* Adapter.swift in Sources */,
 				3BCC008D2C9556F60063D484 /* ActorView.swift in Sources */,
+				3B5EBEC72CD58B0300064C1F /* Proxy.swift in Sources */,
 				3B9559F12C6111CC0028E9FE /* DoCatchTryThrowsViewModel.swift in Sources */,
 				3B7550C72C995D6D008663E5 /* MyNewDataManager.swift in Sources */,
 				3B64DDE62CB2512000E8D2D7 /* AsyncStreamViewModel.swift in Sources */,
@@ -773,6 +788,7 @@
 				3B8FA5012C789ACB00FE2E71 /* TaskGroupViewModel.swift in Sources */,
 				3BCC00932C955D5D0063D484 /* MyDataManager.swift in Sources */,
 				3BD6C48B2C50F0150070279B /* SceneDelegate.swift in Sources */,
+				3B5EBEC92CD58E2D00064C1F /* PropertyProxy.swift in Sources */,
 				3BCC00952C9565B30063D484 /* MyActorDataManager.swift in Sources */,
 				3B9764202CAE1AEE007FE8BC /* SearchChildView.swift in Sources */,
 				3B64DDEB2CB2753600E8D2D7 /* ObservableMacroView.swift in Sources */,
