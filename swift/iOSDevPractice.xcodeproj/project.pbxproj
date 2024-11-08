@@ -81,6 +81,8 @@
 		3BCC00932C955D5D0063D484 /* MyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC00922C955D5D0063D484 /* MyDataManager.swift */; };
 		3BCC00952C9565B30063D484 /* MyActorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC00942C9565B30063D484 /* MyActorDataManager.swift */; };
 		3BCF6FB82CC329F1008FE153 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCF6FB72CC329EE008FE153 /* Bridge.swift */; };
+		3BD0E4ED2CDE9532004819F2 /* Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0E4EC2CDE952D004819F2 /* Iterator.swift */; };
+		3BD0E4EF2CDE9C70004819F2 /* ArrayBackedProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0E4EE2CDE9C63004819F2 /* ArrayBackedProperties.swift */; };
 		3BD397622CABC87D00E7F27D /* RefreshableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD397612CABC87D00E7F27D /* RefreshableView.swift */; };
 		3BD397642CABC88F00E7F27D /* RefreshableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD397632CABC88F00E7F27D /* RefreshableViewModel.swift */; };
 		3BD397662CABC92500E7F27D /* RefreshableDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD397652CABC92500E7F27D /* RefreshableDataService.swift */; };
@@ -194,6 +196,8 @@
 		3BCC00922C955D5D0063D484 /* MyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataManager.swift; sourceTree = "<group>"; };
 		3BCC00942C9565B30063D484 /* MyActorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActorDataManager.swift; sourceTree = "<group>"; };
 		3BCF6FB72CC329EE008FE153 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
+		3BD0E4EC2CDE952D004819F2 /* Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterator.swift; sourceTree = "<group>"; };
+		3BD0E4EE2CDE9C63004819F2 /* ArrayBackedProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayBackedProperties.swift; sourceTree = "<group>"; };
 		3BD397612CABC87D00E7F27D /* RefreshableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableView.swift; sourceTree = "<group>"; };
 		3BD397632CABC88F00E7F27D /* RefreshableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableViewModel.swift; sourceTree = "<group>"; };
 		3BD397652CABC92500E7F27D /* RefreshableDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableDataService.swift; sourceTree = "<group>"; };
@@ -398,6 +402,7 @@
 				3B44B5F92CBC55950067A2C2 /* Factory */,
 				3B210C532CCC23DC00C621C2 /* Flyweight */,
 				3B1C39672CDC3470004F7D1F /* Interpreter */,
+				3BD0E4EB2CDE951A004819F2 /* Iterator */,
 				3BD94EC92CBF1A4C0060B681 /* Prototype */,
 				3B5EBEC52CD58AF900064C1F /* Proxy */,
 				3BD94ECC2CC07E620060B681 /* Singleton */,
@@ -564,6 +569,15 @@
 				3BCF6FB72CC329EE008FE153 /* Bridge.swift */,
 			);
 			path = Bridge;
+			sourceTree = "<group>";
+		};
+		3BD0E4EB2CDE951A004819F2 /* Iterator */ = {
+			isa = PBXGroup;
+			children = (
+				3BD0E4EE2CDE9C63004819F2 /* ArrayBackedProperties.swift */,
+				3BD0E4EC2CDE952D004819F2 /* Iterator.swift */,
+			);
+			path = Iterator;
 			sourceTree = "<group>";
 		};
 		3BD397602CABC86D00E7F27D /* Refreshable */ = {
@@ -773,6 +787,7 @@
 				3BD5392F2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift in Sources */,
 				3B975D5D2CC7751A00893EA2 /* StaticDecorator.swift in Sources */,
 				3B9559EF2C6111750028E9FE /* DoCatchTryThrowsView.swift in Sources */,
+				3BD0E4ED2CDE9532004819F2 /* Iterator.swift in Sources */,
 				3B1B33302CAFD70600D35FD5 /* PhotosPickerViewModel.swift in Sources */,
 				3B64DDEF2CB27A2E00E8D2D7 /* TitleDatabase.swift in Sources */,
 				3B7550F12C9D0654008663E5 /* AsyncPublisherView.swift in Sources */,
@@ -810,6 +825,7 @@
 				3B7550C52C995B2A008663E5 /* GlobalActorViewModel.swift in Sources */,
 				3B7550E82C9C1421008663E5 /* SendableViewModel.swift in Sources */,
 				3B7550EC2C9C1A1B008663E5 /* MyUserInfo.swift in Sources */,
+				3BD0E4EF2CDE9C70004819F2 /* ArrayBackedProperties.swift in Sources */,
 				3B0429482C651E9C004CF65B /* AsyncAwaitView.swift in Sources */,
 				3B97641C2CAE078B007FE8BC /* SearchableViewModel.swift in Sources */,
 				3BCC008F2C955B810063D484 /* HomeView.swift in Sources */,
