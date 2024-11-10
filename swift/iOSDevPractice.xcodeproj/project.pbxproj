@@ -30,6 +30,7 @@
 		3B64DDEB2CB2753600E8D2D7 /* ObservableMacroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDEA2CB2753600E8D2D7 /* ObservableMacroView.swift */; };
 		3B64DDED2CB2754300E8D2D7 /* ObservableMacroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDEC2CB2754300E8D2D7 /* ObservableMacroViewModel.swift */; };
 		3B64DDEF2CB27A2E00E8D2D7 /* TitleDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64DDEE2CB27A2E00E8D2D7 /* TitleDatabase.swift */; };
+		3B6537C62CE0767C00409179 /* Memento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6537C52CE0767A00409179 /* Memento.swift */; };
 		3B7550C32C995ADB008663E5 /* GlobalActorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550C22C995ADB008663E5 /* GlobalActorView.swift */; };
 		3B7550C52C995B2A008663E5 /* GlobalActorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550C42C995B2A008663E5 /* GlobalActorViewModel.swift */; };
 		3B7550C72C995D6D008663E5 /* MyNewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550C62C995D6D008663E5 /* MyNewDataManager.swift */; };
@@ -146,6 +147,7 @@
 		3B64DDEA2CB2753600E8D2D7 /* ObservableMacroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMacroView.swift; sourceTree = "<group>"; };
 		3B64DDEC2CB2754300E8D2D7 /* ObservableMacroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMacroViewModel.swift; sourceTree = "<group>"; };
 		3B64DDEE2CB27A2E00E8D2D7 /* TitleDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDatabase.swift; sourceTree = "<group>"; };
+		3B6537C52CE0767A00409179 /* Memento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memento.swift; sourceTree = "<group>"; };
 		3B7550C22C995ADB008663E5 /* GlobalActorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalActorView.swift; sourceTree = "<group>"; };
 		3B7550C42C995B2A008663E5 /* GlobalActorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalActorViewModel.swift; sourceTree = "<group>"; };
 		3B7550C62C995D6D008663E5 /* MyNewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNewDataManager.swift; sourceTree = "<group>"; };
@@ -357,6 +359,14 @@
 			path = ObservableMacro;
 			sourceTree = "<group>";
 		};
+		3B6537C42CE0767100409179 /* Memento */ = {
+			isa = PBXGroup;
+			children = (
+				3B6537C52CE0767A00409179 /* Memento.swift */,
+			);
+			path = Memento;
+			sourceTree = "<group>";
+		};
 		3B7550C12C995ABE008663E5 /* GlobalActor */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +416,7 @@
 				3B1C39672CDC3470004F7D1F /* Interpreter */,
 				3BD0E4EB2CDE951A004819F2 /* Iterator */,
 				3BD0E4F02CDEA951004819F2 /* Mediator */,
+				3B6537C42CE0767100409179 /* Memento */,
 				3BD94EC92CBF1A4C0060B681 /* Prototype */,
 				3B5EBEC52CD58AF900064C1F /* Proxy */,
 				3BD94ECC2CC07E620060B681 /* Singleton */,
@@ -855,6 +866,7 @@
 				3BD6C48B2C50F0150070279B /* SceneDelegate.swift in Sources */,
 				3B5EBEC92CD58E2D00064C1F /* PropertyProxy.swift in Sources */,
 				3BCC00952C9565B30063D484 /* MyActorDataManager.swift in Sources */,
+				3B6537C62CE0767C00409179 /* Memento.swift in Sources */,
 				3B9764202CAE1AEE007FE8BC /* SearchChildView.swift in Sources */,
 				3B64DDEB2CB2753600E8D2D7 /* ObservableMacroView.swift in Sources */,
 				3B875F222C8D06CB00B355B5 /* CustomStruct.swift in Sources */,
