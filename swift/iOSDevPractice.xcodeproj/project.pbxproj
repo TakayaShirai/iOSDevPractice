@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B01B3B92CE2E37C00BB95B9 /* NullObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01B3B82CE2E37A00BB95B9 /* NullObject.swift */; };
 		3B0429482C651E9C004CF65B /* AsyncAwaitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0429472C651E9C004CF65B /* AsyncAwaitView.swift */; };
 		3B04294A2C651EB7004CF65B /* AsyncAwaitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0429492C651EB7004CF65B /* AsyncAwaitViewModel.swift */; };
 		3B06626C2CDAFB4A00293A5C /* MethodChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06626B2CDAFB4300293A5C /* MethodChain.swift */; };
@@ -124,6 +125,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B01B3B82CE2E37A00BB95B9 /* NullObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullObject.swift; sourceTree = "<group>"; };
 		3B0429472C651E9C004CF65B /* AsyncAwaitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitView.swift; sourceTree = "<group>"; };
 		3B0429492C651EB7004CF65B /* AsyncAwaitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitViewModel.swift; sourceTree = "<group>"; };
 		3B06626B2CDAFB4300293A5C /* MethodChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodChain.swift; sourceTree = "<group>"; };
@@ -251,6 +253,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B01B3B72CE2E36600BB95B9 /* NullObject */ = {
+			isa = PBXGroup;
+			children = (
+				3B01B3B82CE2E37A00BB95B9 /* NullObject.swift */,
+			);
+			path = NullObject;
+			sourceTree = "<group>";
+		};
 		3B0429462C651E88004CF65B /* AsyncAwait */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +427,7 @@
 				3BD0E4EB2CDE951A004819F2 /* Iterator */,
 				3BD0E4F02CDEA951004819F2 /* Mediator */,
 				3B6537C42CE0767100409179 /* Memento */,
+				3B01B3B72CE2E36600BB95B9 /* NullObject */,
 				3BD94EC92CBF1A4C0060B681 /* Prototype */,
 				3B5EBEC52CD58AF900064C1F /* Proxy */,
 				3BD94ECC2CC07E620060B681 /* Singleton */,
@@ -846,6 +857,7 @@
 				3BD6C4892C50F0150070279B /* AppDelegate.swift in Sources */,
 				3B7550C52C995B2A008663E5 /* GlobalActorViewModel.swift in Sources */,
 				3B7550E82C9C1421008663E5 /* SendableViewModel.swift in Sources */,
+				3B01B3B92CE2E37C00BB95B9 /* NullObject.swift in Sources */,
 				3B7550EC2C9C1A1B008663E5 /* MyUserInfo.swift in Sources */,
 				3BD0E4EF2CDE9C70004819F2 /* ArrayBackedProperties.swift in Sources */,
 				3B0429482C651E9C004CF65B /* AsyncAwaitView.swift in Sources */,
