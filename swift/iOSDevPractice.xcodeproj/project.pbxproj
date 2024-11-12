@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B01B3B92CE2E37C00BB95B9 /* NullObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01B3B82CE2E37A00BB95B9 /* NullObject.swift */; };
+		3B01B3BC2CE2EC6200BB95B9 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01B3BB2CE2EC5700BB95B9 /* Events.swift */; };
+		3B01B3BE2CE2FF3F00BB95B9 /* Property.swift in Resources */ = {isa = PBXBuildFile; fileRef = 3B01B3BD2CE2FF3F00BB95B9 /* Property.swift */; };
 		3B0429482C651E9C004CF65B /* AsyncAwaitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0429472C651E9C004CF65B /* AsyncAwaitView.swift */; };
 		3B04294A2C651EB7004CF65B /* AsyncAwaitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0429492C651EB7004CF65B /* AsyncAwaitViewModel.swift */; };
 		3B06626C2CDAFB4A00293A5C /* MethodChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06626B2CDAFB4300293A5C /* MethodChain.swift */; };
@@ -126,6 +128,8 @@
 
 /* Begin PBXFileReference section */
 		3B01B3B82CE2E37A00BB95B9 /* NullObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullObject.swift; sourceTree = "<group>"; };
+		3B01B3BB2CE2EC5700BB95B9 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		3B01B3BD2CE2FF3F00BB95B9 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		3B0429472C651E9C004CF65B /* AsyncAwaitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitView.swift; sourceTree = "<group>"; };
 		3B0429492C651EB7004CF65B /* AsyncAwaitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitViewModel.swift; sourceTree = "<group>"; };
 		3B06626B2CDAFB4300293A5C /* MethodChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodChain.swift; sourceTree = "<group>"; };
@@ -259,6 +263,15 @@
 				3B01B3B82CE2E37A00BB95B9 /* NullObject.swift */,
 			);
 			path = NullObject;
+			sourceTree = "<group>";
+		};
+		3B01B3BA2CE2EC2500BB95B9 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				3B01B3BB2CE2EC5700BB95B9 /* Events.swift */,
+				3B01B3BD2CE2FF3F00BB95B9 /* Property.swift */,
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 		3B0429462C651E88004CF65B /* AsyncAwait */ = {
@@ -428,6 +441,7 @@
 				3BD0E4F02CDEA951004819F2 /* Mediator */,
 				3B6537C42CE0767100409179 /* Memento */,
 				3B01B3B72CE2E36600BB95B9 /* NullObject */,
+				3B01B3BA2CE2EC2500BB95B9 /* Observer */,
 				3BD94EC92CBF1A4C0060B681 /* Prototype */,
 				3B5EBEC52CD58AF900064C1F /* Proxy */,
 				3BD94ECC2CC07E620060B681 /* Singleton */,
@@ -797,6 +811,7 @@
 			files = (
 				3BD6C4922C50F0160070279B /* Assets.xcassets in Resources */,
 				3BD94ED02CC083210060B681 /* capitals.txt in Resources */,
+				3B01B3BE2CE2FF3F00BB95B9 /* Property.swift in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,6 +894,7 @@
 				3B5EBEC92CD58E2D00064C1F /* PropertyProxy.swift in Sources */,
 				3BCC00952C9565B30063D484 /* MyActorDataManager.swift in Sources */,
 				3B6537C62CE0767C00409179 /* Memento.swift in Sources */,
+				3B01B3BC2CE2EC6200BB95B9 /* Events.swift in Sources */,
 				3B9764202CAE1AEE007FE8BC /* SearchChildView.swift in Sources */,
 				3B64DDEB2CB2753600E8D2D7 /* ObservableMacroView.swift in Sources */,
 				3B875F222C8D06CB00B355B5 /* CustomStruct.swift in Sources */,
