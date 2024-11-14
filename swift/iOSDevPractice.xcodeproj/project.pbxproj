@@ -48,6 +48,7 @@
 		3B7550F52C9D11D4008663E5 /* AsyncPublisherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7550F42C9D11D4008663E5 /* AsyncPublisherDataManager.swift */; };
 		3B7DAD6E2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DAD6C2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift */; };
 		3B7DAD712CB3A9A10016FED7 /* OpenClosedPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DAD702CB3A9A10016FED7 /* OpenClosedPrinciple.swift */; };
+		3B801A3D2CE5F00200BDF440 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B801A3C2CE5EFFF00BDF440 /* State.swift */; };
 		3B875F1C2C8CF9E200B355B5 /* StructClassActorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B875F1B2C8CF9E200B355B5 /* StructClassActorView.swift */; };
 		3B875F1E2C8CFB1200B355B5 /* MyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B875F1D2C8CFB1200B355B5 /* MyStruct.swift */; };
 		3B875F202C8CFECA00B355B5 /* Myclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B875F1F2C8CFECA00B355B5 /* Myclass.swift */; };
@@ -168,6 +169,7 @@
 		3B7550F42C9D11D4008663E5 /* AsyncPublisherDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPublisherDataManager.swift; sourceTree = "<group>"; };
 		3B7DAD6C2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleResponsibilityPrinciple.swift; sourceTree = "<group>"; };
 		3B7DAD702CB3A9A10016FED7 /* OpenClosedPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenClosedPrinciple.swift; sourceTree = "<group>"; };
+		3B801A3C2CE5EFFF00BDF440 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		3B875F1B2C8CF9E200B355B5 /* StructClassActorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructClassActorView.swift; sourceTree = "<group>"; };
 		3B875F1D2C8CFB1200B355B5 /* MyStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStruct.swift; sourceTree = "<group>"; };
 		3B875F1F2C8CFECA00B355B5 /* Myclass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Myclass.swift; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 				3B5EBEC52CD58AF900064C1F /* Proxy */,
 				3BD94ECC2CC07E620060B681 /* Singleton */,
 				3B7DAD6F2CB3A9850016FED7 /* SolidDesignPrinciples */,
+				3B801A3B2CE5EFEE00BDF440 /* State */,
 			);
 			path = DesignPatterns;
 			sourceTree = "<group>";
@@ -460,6 +463,14 @@
 				3B7DAD6C2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift */,
 			);
 			path = SolidDesignPrinciples;
+			sourceTree = "<group>";
+		};
+		3B801A3B2CE5EFEE00BDF440 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				3B801A3C2CE5EFFF00BDF440 /* State.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 		3B875F1A2C8CF9C100B355B5 /* StructClassActor */ = {
@@ -897,6 +908,7 @@
 				3B01B3BC2CE2EC6200BB95B9 /* Events.swift in Sources */,
 				3B9764202CAE1AEE007FE8BC /* SearchChildView.swift in Sources */,
 				3B64DDEB2CB2753600E8D2D7 /* ObservableMacroView.swift in Sources */,
+				3B801A3D2CE5F00200BDF440 /* State.swift in Sources */,
 				3B875F222C8D06CB00B355B5 /* CustomStruct.swift in Sources */,
 				3BD539312CA77734004CE28D /* StrongWeakReferencesDataService.swift in Sources */,
 				3B3314F52C53CC0800986EAA /* OBViewController.swift in Sources */,
