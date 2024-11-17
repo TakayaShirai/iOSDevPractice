@@ -112,6 +112,7 @@
 		3BDC44D52C63603E00D11760 /* DownloadImagesWithAsyncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44D42C63603E00D11760 /* DownloadImagesWithAsyncView.swift */; };
 		3BDC44D72C6360FD00D11760 /* DownloadImagesWithAsyncViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44D62C6360FD00D11760 /* DownloadImagesWithAsyncViewModel.swift */; };
 		3BDC44D92C63622D00D11760 /* DownloadImageAsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44D82C63622D00D11760 /* DownloadImageAsyncImageLoader.swift */; };
+		3BDFF6552CEA81640083C03F /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFF6542CEA81600083C03F /* Template.swift */; };
 		3BE097122CB498F1006B2B6F /* LiskovSubstitutionPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE097112CB498F1006B2B6F /* LiskovSubstitutionPrinciple.swift */; };
 		3BE097142CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE097132CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift */; };
 		3BE097162CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE097152CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift */; };
@@ -237,6 +238,7 @@
 		3BDC44D42C63603E00D11760 /* DownloadImagesWithAsyncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImagesWithAsyncView.swift; sourceTree = "<group>"; };
 		3BDC44D62C6360FD00D11760 /* DownloadImagesWithAsyncViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImagesWithAsyncViewModel.swift; sourceTree = "<group>"; };
 		3BDC44D82C63622D00D11760 /* DownloadImageAsyncImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsyncImageLoader.swift; sourceTree = "<group>"; };
+		3BDFF6542CEA81600083C03F /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		3BE097112CB498F1006B2B6F /* LiskovSubstitutionPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiskovSubstitutionPrinciple.swift; sourceTree = "<group>"; };
 		3BE097132CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceSegregationPrinciple.swift; sourceTree = "<group>"; };
 		3BE097152CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInversionPrinciple.swift; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 				3B7DAD6F2CB3A9850016FED7 /* SolidDesignPrinciples */,
 				3B801A3B2CE5EFEE00BDF440 /* State */,
 				3B08824D2CE9DF4B001BEDB1 /* Strategy */,
+				3BDFF6532CEA81520083C03F /* Template */,
 			);
 			path = DesignPatterns;
 			sourceTree = "<group>";
@@ -740,6 +743,14 @@
 			path = DownloadImagesWithAsync;
 			sourceTree = "<group>";
 		};
+		3BDFF6532CEA81520083C03F /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				3BDFF6542CEA81600083C03F /* Template.swift */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
 		3BE83C492CC23B5900AB5CB7 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -898,6 +909,7 @@
 				3B01B3B92CE2E37C00BB95B9 /* NullObject.swift in Sources */,
 				3B7550EC2C9C1A1B008663E5 /* MyUserInfo.swift in Sources */,
 				3BD0E4EF2CDE9C70004819F2 /* ArrayBackedProperties.swift in Sources */,
+				3BDFF6552CEA81640083C03F /* Template.swift in Sources */,
 				3B0429482C651E9C004CF65B /* AsyncAwaitView.swift in Sources */,
 				3B97641C2CAE078B007FE8BC /* SearchableViewModel.swift in Sources */,
 				3BCC008F2C955B810063D484 /* HomeView.swift in Sources */,
