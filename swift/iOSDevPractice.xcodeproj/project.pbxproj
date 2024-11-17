@@ -113,6 +113,10 @@
 		3BDC44D72C6360FD00D11760 /* DownloadImagesWithAsyncViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44D62C6360FD00D11760 /* DownloadImagesWithAsyncViewModel.swift */; };
 		3BDC44D92C63622D00D11760 /* DownloadImageAsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44D82C63622D00D11760 /* DownloadImageAsyncImageLoader.swift */; };
 		3BDFF6552CEA81640083C03F /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFF6542CEA81600083C03F /* Template.swift */; };
+		3BDFF6582CEA8A9B0083C03F /* IntrusiveExpressionPrinting.swift in Resources */ = {isa = PBXBuildFile; fileRef = 3BDFF6572CEA8A9B0083C03F /* IntrusiveExpressionPrinting.swift */; };
+		3BDFF65A2CEA913A0083C03F /* ClassicVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFF6592CEA91350083C03F /* ClassicVisitor.swift */; };
+		3BDFF65C2CEA91630083C03F /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFF65B2CEA91600083C03F /* Dispatch.swift */; };
+		3BDFF65E2CEA92AF0083C03F /* ReflectionBasedPrinting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFF65D2CEA92A70083C03F /* ReflectionBasedPrinting.swift */; };
 		3BE097122CB498F1006B2B6F /* LiskovSubstitutionPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE097112CB498F1006B2B6F /* LiskovSubstitutionPrinciple.swift */; };
 		3BE097142CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE097132CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift */; };
 		3BE097162CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE097152CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift */; };
@@ -239,6 +243,10 @@
 		3BDC44D62C6360FD00D11760 /* DownloadImagesWithAsyncViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImagesWithAsyncViewModel.swift; sourceTree = "<group>"; };
 		3BDC44D82C63622D00D11760 /* DownloadImageAsyncImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsyncImageLoader.swift; sourceTree = "<group>"; };
 		3BDFF6542CEA81600083C03F /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		3BDFF6572CEA8A9B0083C03F /* IntrusiveExpressionPrinting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrusiveExpressionPrinting.swift; sourceTree = "<group>"; };
+		3BDFF6592CEA91350083C03F /* ClassicVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicVisitor.swift; sourceTree = "<group>"; };
+		3BDFF65B2CEA91600083C03F /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		3BDFF65D2CEA92A70083C03F /* ReflectionBasedPrinting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionBasedPrinting.swift; sourceTree = "<group>"; };
 		3BE097112CB498F1006B2B6F /* LiskovSubstitutionPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiskovSubstitutionPrinciple.swift; sourceTree = "<group>"; };
 		3BE097132CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceSegregationPrinciple.swift; sourceTree = "<group>"; };
 		3BE097152CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInversionPrinciple.swift; sourceTree = "<group>"; };
@@ -463,6 +471,7 @@
 				3B801A3B2CE5EFEE00BDF440 /* State */,
 				3B08824D2CE9DF4B001BEDB1 /* Strategy */,
 				3BDFF6532CEA81520083C03F /* Template */,
+				3BDFF6562CEA8A950083C03F /* Visitor */,
 			);
 			path = DesignPatterns;
 			sourceTree = "<group>";
@@ -751,6 +760,17 @@
 			path = Template;
 			sourceTree = "<group>";
 		};
+		3BDFF6562CEA8A950083C03F /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				3BDFF6592CEA91350083C03F /* ClassicVisitor.swift */,
+				3BDFF65B2CEA91600083C03F /* Dispatch.swift */,
+				3BDFF6572CEA8A9B0083C03F /* IntrusiveExpressionPrinting.swift */,
+				3BDFF65D2CEA92A70083C03F /* ReflectionBasedPrinting.swift */,
+			);
+			path = Visitor;
+			sourceTree = "<group>";
+		};
 		3BE83C492CC23B5900AB5CB7 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -844,6 +864,7 @@
 			files = (
 				3BD6C4922C50F0160070279B /* Assets.xcassets in Resources */,
 				3BD94ED02CC083210060B681 /* capitals.txt in Resources */,
+				3BDFF6582CEA8A9B0083C03F /* IntrusiveExpressionPrinting.swift in Resources */,
 				3B01B3BE2CE2FF3F00BB95B9 /* Property.swift in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -905,6 +926,7 @@
 				3B64DDE62CB2512000E8D2D7 /* AsyncStreamViewModel.swift in Sources */,
 				3BD6C4892C50F0150070279B /* AppDelegate.swift in Sources */,
 				3B7550C52C995B2A008663E5 /* GlobalActorViewModel.swift in Sources */,
+				3BDFF65E2CEA92AF0083C03F /* ReflectionBasedPrinting.swift in Sources */,
 				3B7550E82C9C1421008663E5 /* SendableViewModel.swift in Sources */,
 				3B01B3B92CE2E37C00BB95B9 /* NullObject.swift in Sources */,
 				3B7550EC2C9C1A1B008663E5 /* MyUserInfo.swift in Sources */,
@@ -947,6 +969,7 @@
 				3BD539362CA788A6004CE28D /* MVVMViewModel.swift in Sources */,
 				3B97641E2CAE079D007FE8BC /* RestaurantManager.swift in Sources */,
 				3B64DDED2CB2754300E8D2D7 /* ObservableMacroViewModel.swift in Sources */,
+				3BDFF65A2CEA913A0083C03F /* ClassicVisitor.swift in Sources */,
 				3BD397662CABC92500E7F27D /* RefreshableDataService.swift in Sources */,
 				3BB87F5E2CBA0CAA00853E8E /* Builder.swift in Sources */,
 				3B975D542CC58ABB00893EA2 /* NeuralNetworks.swift in Sources */,
@@ -957,6 +980,7 @@
 				3B64DDE42CB2511400E8D2D7 /* AsyncStreamView.swift in Sources */,
 				3B7550C92C996714008663E5 /* MyFirstGlobalActor.swift in Sources */,
 				3B7550C32C995ADB008663E5 /* GlobalActorView.swift in Sources */,
+				3BDFF65C2CEA91630083C03F /* Dispatch.swift in Sources */,
 				3BDC44D02C63535F00D11760 /* MainViewController.swift in Sources */,
 				3BD397622CABC87D00E7F27D /* RefreshableView.swift in Sources */,
 				3BD539342CA7889D004CE28D /* MVVMView.swift in Sources */,
