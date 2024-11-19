@@ -1,4 +1,5 @@
 import Foundation
+import SwiftData
 import SwiftUI
 import UIKit
 
@@ -6,6 +7,7 @@ class MainViewController: UIViewController {
   private enum LocalizedString {
     static let oBButtonTitle = String(localized: "Observable Object")
     static let concurrencyButtonTitle = String(localized: "Concurrency")
+    static let swiftDataButtonTitle = String(localized: "SwiftData")
   }
 
   private lazy var oBButton: UIButton = {
@@ -26,6 +28,15 @@ class MainViewController: UIViewController {
     return button
   }()
 
+  private lazy var swiftDataButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle(LocalizedString.swiftDataButtonTitle, for: .normal)
+    button.setTitleColor(.blue, for: .normal)
+    button.addTarget(self, action: #selector(navigateToSwiftDataView), for: .touchUpInside)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+  }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpSubviews()
@@ -34,6 +45,7 @@ class MainViewController: UIViewController {
   private func setUpSubviews() {
     view.addSubview(oBButton)
     view.addSubview(concurrencyButton)
+    view.addSubview(swiftDataButton)
 
     view.backgroundColor = .systemBackground
 
@@ -45,6 +57,9 @@ class MainViewController: UIViewController {
 
       concurrencyButton.topAnchor.constraint(equalTo: oBButton.bottomAnchor),
       concurrencyButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
+
+      swiftDataButton.topAnchor.constraint(equalTo: concurrencyButton.bottomAnchor),
+      swiftDataButton.centerXAnchor.constraint(equalTo: layoutGuide.centerXAnchor),
     ])
   }
 
@@ -56,5 +71,15 @@ class MainViewController: UIViewController {
   @objc func navigateToConcurrencyView() {
     let concurrencyViewController = ConcurrencyViewController()
     navigationController?.pushViewController(concurrencyViewController, animated: true)
+  }
+
+  @objc func navigateToSwiftDataView() {
+    let swiftDataViewController = UIHostingController(
+      rootView: NavigationStack {
+        SwiftDataPracticeView().modelContainer(for: [Movie.self])
+      }
+    )
+    swiftDataViewController.modalPresentationStyle = .fullScreen
+    self.present(swiftDataViewController, animated: true)
   }
 }

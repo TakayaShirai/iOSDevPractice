@@ -107,6 +107,13 @@
 		3BD94ECE2CC07E750060B681 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD94ECD2CC07E710060B681 /* Singleton.swift */; };
 		3BD94ED02CC083210060B681 /* capitals.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3BD94ECF2CC083180060B681 /* capitals.txt */; };
 		3BD94EE42CC0916F0060B681 /* Monostate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD94EE32CC0916D0060B681 /* Monostate.swift */; };
+		3BD9AF432CEBF4FA008DEEEA /* SwiftDataPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9AF422CEBF4F3008DEEEA /* SwiftDataPractice.swift */; };
+		3BD9AF452CEBF55A008DEEEA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9AF442CEBF550008DEEEA /* Movie.swift */; };
+		3BD9AF492CEBF665008DEEEA /* AddMovieScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9AF482CEBF665008DEEEA /* AddMovieScreen.swift */; };
+		3BD9AF4C2CEBF726008DEEEA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9AF4B2CEBF726008DEEEA /* StringExtension.swift */; };
+		3BD9AF4E2CEBFF4C008DEEEA /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9AF4D2CEBFF4C008DEEEA /* MovieListScreen.swift */; };
+		3BD9AF532CEC06D5008DEEEA /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9AF522CEC06D5008DEEEA /* MovieListView.swift */; };
+		3BD9AF552CEC08B1008DEEEA /* MovieDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9AF542CEC08B1008DEEEA /* MovieDetailScreen.swift */; };
 		3BDC44D02C63535F00D11760 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44CF2C63535F00D11760 /* MainViewController.swift */; };
 		3BDC44D22C6358BA00D11760 /* ConcurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44D12C6358BA00D11760 /* ConcurrencyViewController.swift */; };
 		3BDC44D52C63603E00D11760 /* DownloadImagesWithAsyncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDC44D42C63603E00D11760 /* DownloadImagesWithAsyncView.swift */; };
@@ -240,6 +247,13 @@
 		3BD94ECF2CC083180060B681 /* capitals.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = capitals.txt; sourceTree = "<group>"; };
 		3BD94ED52CC089130060B681 /* iOSDevPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDevPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD94EE32CC0916D0060B681 /* Monostate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monostate.swift; sourceTree = "<group>"; };
+		3BD9AF422CEBF4F3008DEEEA /* SwiftDataPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataPractice.swift; sourceTree = "<group>"; };
+		3BD9AF442CEBF550008DEEEA /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		3BD9AF482CEBF665008DEEEA /* AddMovieScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieScreen.swift; sourceTree = "<group>"; };
+		3BD9AF4B2CEBF726008DEEEA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		3BD9AF4D2CEBFF4C008DEEEA /* MovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListScreen.swift; sourceTree = "<group>"; };
+		3BD9AF522CEC06D5008DEEEA /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
+		3BD9AF542CEC08B1008DEEEA /* MovieDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailScreen.swift; sourceTree = "<group>"; };
 		3BDC44CF2C63535F00D11760 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3BDC44D12C6358BA00D11760 /* ConcurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyViewController.swift; sourceTree = "<group>"; };
 		3BDC44D42C63603E00D11760 /* DownloadImagesWithAsyncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImagesWithAsyncView.swift; sourceTree = "<group>"; };
@@ -749,6 +763,40 @@
 			path = Singleton;
 			sourceTree = "<group>";
 		};
+		3BD9AF462CEBF561008DEEEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3BD9AF442CEBF550008DEEEA /* Movie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3BD9AF472CEBF64F008DEEEA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3BD9AF482CEBF665008DEEEA /* AddMovieScreen.swift */,
+				3BD9AF4D2CEBFF4C008DEEEA /* MovieListScreen.swift */,
+				3BD9AF542CEC08B1008DEEEA /* MovieDetailScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		3BD9AF4A2CEBF716008DEEEA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3BD9AF4B2CEBF726008DEEEA /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3BD9AF4F2CEC06BF008DEEEA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3BD9AF522CEC06D5008DEEEA /* MovieListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3BDC44D32C63600C00D11760 /* DownloadImagesWithAsync */ = {
 			isa = PBXGroup;
 			children = (
@@ -781,7 +829,12 @@
 		3BDFF65F2CEACED20083C03F /* SwiftData */ = {
 			isa = PBXGroup;
 			children = (
+				3BD9AF422CEBF4F3008DEEEA /* SwiftDataPractice.swift */,
+				3BD9AF4A2CEBF716008DEEEA /* Extensions */,
+				3BD9AF462CEBF561008DEEEA /* Models */,
+				3BD9AF472CEBF64F008DEEEA /* Screens */,
 				3BDFF6602CEACF190083C03F /* StateManagement */,
+				3BD9AF4F2CEC06BF008DEEEA /* Views */,
 			);
 			path = SwiftData;
 			sourceTree = "<group>";
@@ -958,6 +1011,7 @@
 				3BD0E4EF2CDE9C70004819F2 /* ArrayBackedProperties.swift in Sources */,
 				3BDFF6552CEA81640083C03F /* Template.swift in Sources */,
 				3B0429482C651E9C004CF65B /* AsyncAwaitView.swift in Sources */,
+				3BD9AF4C2CEBF726008DEEEA /* StringExtension.swift in Sources */,
 				3B97641C2CAE078B007FE8BC /* SearchableViewModel.swift in Sources */,
 				3BCC008F2C955B810063D484 /* HomeView.swift in Sources */,
 				3B975D572CC7436500893EA2 /* SimplestDecorator.swift in Sources */,
@@ -969,6 +1023,7 @@
 				3BD94ECB2CBF3A540060B681 /* Prototype.swift in Sources */,
 				3B9AE41E2C6CDB3C00E0ABE1 /* TaskViewModel.swift in Sources */,
 				3BDC44D92C63622D00D11760 /* DownloadImageAsyncImageLoader.swift in Sources */,
+				3BD9AF4E2CEBFF4C008DEEEA /* MovieListScreen.swift in Sources */,
 				3B8FA5082C78B81000FE2E71 /* ContinuationsViewModel.swift in Sources */,
 				3B8FA5012C789ACB00FE2E71 /* TaskGroupViewModel.swift in Sources */,
 				3B06626E2CDAFDC200293A5C /* BrockerChain.swift in Sources */,
@@ -976,6 +1031,8 @@
 				3BD6C48B2C50F0150070279B /* SceneDelegate.swift in Sources */,
 				3B5EBEC92CD58E2D00064C1F /* PropertyProxy.swift in Sources */,
 				3BCC00952C9565B30063D484 /* MyActorDataManager.swift in Sources */,
+				3BD9AF452CEBF55A008DEEEA /* Movie.swift in Sources */,
+				3BD9AF532CEC06D5008DEEEA /* MovieListView.swift in Sources */,
 				3B6537C62CE0767C00409179 /* Memento.swift in Sources */,
 				3B01B3BC2CE2EC6200BB95B9 /* Events.swift in Sources */,
 				3B9764202CAE1AEE007FE8BC /* SearchChildView.swift in Sources */,
@@ -987,14 +1044,17 @@
 				3B7550F52C9D11D4008663E5 /* AsyncPublisherDataManager.swift in Sources */,
 				3BD94EE42CC0916F0060B681 /* Monostate.swift in Sources */,
 				3BD0E4F22CDEA969004819F2 /* Mediator.swift in Sources */,
+				3BD9AF492CEBF665008DEEEA /* AddMovieScreen.swift in Sources */,
 				3B7550EA2C9C145F008663E5 /* CurrentUserManager.swift in Sources */,
 				3BB99EC82C6DCA4000204E51 /* AsyncLetView.swift in Sources */,
 				3BDFF6632CEAD00E0083C03F /* StateView.swift in Sources */,
+				3BD9AF432CEBF4FA008DEEEA /* SwiftDataPractice.swift in Sources */,
 				3B875F202C8CFECA00B355B5 /* Myclass.swift in Sources */,
 				3B12D9892CCA1078009BB8DE /* Façade.swift in Sources */,
 				3B975D592CC773CA00893EA2 /* MultipleInheritanceDecorator.swift in Sources */,
 				3BD539362CA788A6004CE28D /* MVVMViewModel.swift in Sources */,
 				3B97641E2CAE079D007FE8BC /* RestaurantManager.swift in Sources */,
+				3BD9AF552CEC08B1008DEEEA /* MovieDetailScreen.swift in Sources */,
 				3B64DDED2CB2754300E8D2D7 /* ObservableMacroViewModel.swift in Sources */,
 				3BDFF65A2CEA913A0083C03F /* ClassicVisitor.swift in Sources */,
 				3BD397662CABC92500E7F27D /* RefreshableDataService.swift in Sources */,
