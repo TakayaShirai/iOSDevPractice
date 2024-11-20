@@ -9,6 +9,17 @@ final class Movie {
   var title: String
   var year: Int
 
+  // - deleteRule: .cascade ensures that if a Movie is deleted, all associated reviews are also deleted.
+  // - inverse: \Review.movie specifies that the `movie` property in the `Review` class is the inverse relationship.
+  // Inverse relationships enable Core Data to propagate change in both directions when an instance of
+  // either the source or destination type changes.
+
+  // In the Movie and Review models, the inverse relationship makes sure that:
+  // Each Movie can have multiple associated Review objects.
+  // Each Review knows which Movie it belongs to.
+  @Relationship(deleteRule: .cascade, inverse: \Review.movie)
+  var reviews: [Review] = []
+
   init(title: String, year: Int) {
     self.title = title
     self.year = year

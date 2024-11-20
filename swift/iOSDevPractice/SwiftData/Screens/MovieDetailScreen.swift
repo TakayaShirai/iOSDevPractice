@@ -7,6 +7,8 @@ struct MovieDetailScreen: View {
     static let title = String(localized: "Title")
     static let year = String(localized: "Year")
     static let update = String(localized: "Update")
+    static let sectionTitle = String(localized: "Reviews")
+    static let noReviewsText = String(localized: "No reviews yet")
   }
 
   @Environment(\.modelContext) private var context
@@ -15,6 +17,7 @@ struct MovieDetailScreen: View {
 
   @State private var title: String = ""
   @State private var year: Int?
+  @State private var showReviewScreen: Bool = false
 
   var body: some View {
     Form {
@@ -39,10 +42,33 @@ struct MovieDetailScreen: View {
         Text(LocalizedString.update)
       }
       .buttonStyle(.borderless)
+
+      Section(LocalizedString.sectionTitle) {
+        Button {
+          showReviewScreen = true
+        } label: {
+          Image(systemName: "plus")
+            .frame(maxWidth: .infinity, alignment: .trailing)
+        }
+
+        if movie.reviews.isEmpty {
+          ContentUnavailableView {
+            Text(LocalizedString.noReviewsText)
+          }
+        } else {
+          ReviewListView(movie: movie)
+        }
+
+      }
     }
     .onAppear {
       title = movie.title
       year = movie.year
+    }
+    .sheet(isPresented: $showReviewScreen) {
+      NavigationStack {
+        AddReviewScreen(movie: movie)
+      }
     }
   }
 }

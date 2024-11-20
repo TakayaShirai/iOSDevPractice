@@ -62,6 +62,9 @@
 		3B8FA5062C78B7FF00FE2E71 /* ContinuationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8FA5052C78B7FF00FE2E71 /* ContinuationsView.swift */; };
 		3B8FA5082C78B81000FE2E71 /* ContinuationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8FA5072C78B81000FE2E71 /* ContinuationsViewModel.swift */; };
 		3B8FA50A2C78BFD200FE2E71 /* ContinuationsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8FA5092C78BFD200FE2E71 /* ContinuationsNetworkManager.swift */; };
+		3B9001CC2CEDB15400061246 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9001CB2CEDB15400061246 /* Review.swift */; };
+		3B9001CE2CEDB63100061246 /* AddReviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9001CD2CEDB63100061246 /* AddReviewScreen.swift */; };
+		3B9001D12CEDBE3700061246 /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9001D02CEDBE3700061246 /* ReviewListView.swift */; };
 		3B9559EF2C6111750028E9FE /* DoCatchTryThrowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9559EE2C6111750028E9FE /* DoCatchTryThrowsView.swift */; };
 		3B9559F12C6111CC0028E9FE /* DoCatchTryThrowsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9559F02C6111CC0028E9FE /* DoCatchTryThrowsViewModel.swift */; };
 		3B9559F32C6113670028E9FE /* DoCatchTryThrowsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9559F22C6113670028E9FE /* DoCatchTryThrowsDataManager.swift */; };
@@ -199,6 +202,9 @@
 		3B8FA5052C78B7FF00FE2E71 /* ContinuationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuationsView.swift; sourceTree = "<group>"; };
 		3B8FA5072C78B81000FE2E71 /* ContinuationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuationsViewModel.swift; sourceTree = "<group>"; };
 		3B8FA5092C78BFD200FE2E71 /* ContinuationsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuationsNetworkManager.swift; sourceTree = "<group>"; };
+		3B9001CB2CEDB15400061246 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		3B9001CD2CEDB63100061246 /* AddReviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewScreen.swift; sourceTree = "<group>"; };
+		3B9001D02CEDBE3700061246 /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
 		3B9559EE2C6111750028E9FE /* DoCatchTryThrowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrowsView.swift; sourceTree = "<group>"; };
 		3B9559F02C6111CC0028E9FE /* DoCatchTryThrowsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrowsViewModel.swift; sourceTree = "<group>"; };
 		3B9559F22C6113670028E9FE /* DoCatchTryThrowsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrowsDataManager.swift; sourceTree = "<group>"; };
@@ -767,6 +773,7 @@
 			isa = PBXGroup;
 			children = (
 				3BD9AF442CEBF550008DEEEA /* Movie.swift */,
+				3B9001CB2CEDB15400061246 /* Review.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -775,8 +782,9 @@
 			isa = PBXGroup;
 			children = (
 				3BD9AF482CEBF665008DEEEA /* AddMovieScreen.swift */,
-				3BD9AF4D2CEBFF4C008DEEEA /* MovieListScreen.swift */,
+				3B9001CD2CEDB63100061246 /* AddReviewScreen.swift */,
 				3BD9AF542CEC08B1008DEEEA /* MovieDetailScreen.swift */,
+				3BD9AF4D2CEBFF4C008DEEEA /* MovieListScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -793,6 +801,7 @@
 			isa = PBXGroup;
 			children = (
 				3BD9AF522CEC06D5008DEEEA /* MovieListView.swift */,
+				3B9001D02CEDBE3700061246 /* ReviewListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -967,6 +976,7 @@
 				3BD5392F2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift in Sources */,
 				3B975D5D2CC7751A00893EA2 /* StaticDecorator.swift in Sources */,
 				3B9559EF2C6111750028E9FE /* DoCatchTryThrowsView.swift in Sources */,
+				3B9001CC2CEDB15400061246 /* Review.swift in Sources */,
 				3B08824F2CE9DF5B001BEDB1 /* Strategy.swift in Sources */,
 				3BD0E4ED2CDE9532004819F2 /* Iterator.swift in Sources */,
 				3B1B33302CAFD70600D35FD5 /* PhotosPickerViewModel.swift in Sources */,
@@ -994,6 +1004,7 @@
 				3B64DDE82CB2625A00E8D2D7 /* AsyncStreamDataManager.swift in Sources */,
 				3B875F262C8D19D600B355B5 /* MyActor.swift in Sources */,
 				3BCF6FB82CC329F1008FE153 /* Bridge.swift in Sources */,
+				3B9001D12CEDBE3700061246 /* ReviewListView.swift in Sources */,
 				3BD5393A2CA7895E004CE28D /* MyManagerActor.swift in Sources */,
 				3B9AE41C2C6CDB2F00E0ABE1 /* TaskView.swift in Sources */,
 				3BE83C4B2CC23B6500AB5CB7 /* Adapter.swift in Sources */,
@@ -1033,6 +1044,7 @@
 				3BCC00952C9565B30063D484 /* MyActorDataManager.swift in Sources */,
 				3BD9AF452CEBF55A008DEEEA /* Movie.swift in Sources */,
 				3BD9AF532CEC06D5008DEEEA /* MovieListView.swift in Sources */,
+				3B9001CE2CEDB63100061246 /* AddReviewScreen.swift in Sources */,
 				3B6537C62CE0767C00409179 /* Memento.swift in Sources */,
 				3B01B3BC2CE2EC6200BB95B9 /* Events.swift in Sources */,
 				3B9764202CAE1AEE007FE8BC /* SearchChildView.swift in Sources */,
