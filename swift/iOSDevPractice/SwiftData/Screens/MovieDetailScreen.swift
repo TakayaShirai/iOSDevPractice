@@ -7,8 +7,10 @@ struct MovieDetailScreen: View {
     static let title = String(localized: "Title")
     static let year = String(localized: "Year")
     static let update = String(localized: "Update")
-    static let sectionTitle = String(localized: "Reviews")
+    static let reviewSectionTitle = String(localized: "Reviews")
+    static let actorSectionTitle = String(localized: "Actors")
     static let noReviewsText = String(localized: "No reviews yet")
+    static let noActorsText = String(localized: "No actors available")
   }
 
   @Environment(\.modelContext) private var context
@@ -21,45 +23,12 @@ struct MovieDetailScreen: View {
 
   var body: some View {
     Form {
-      TextField(LocalizedString.title, text: $title)
-      TextField(LocalizedString.year, value: $year, format: .number)
+      newMovieTextFields()
 
-      Button {
-        guard let year = year else { return }
+      updateMovieButton()
 
-        movie.title = title
-        movie.year = year
-
-        do {
-          try context.save()
-        } catch {
-          print(error.localizedDescription)
-        }
-
-        dismiss()
-
-      } label: {
-        Text(LocalizedString.update)
-      }
-      .buttonStyle(.borderless)
-
-      Section(LocalizedString.sectionTitle) {
-        Button {
-          showReviewScreen = true
-        } label: {
-          Image(systemName: "plus")
-            .frame(maxWidth: .infinity, alignment: .trailing)
-        }
-
-        if movie.reviews.isEmpty {
-          ContentUnavailableView {
-            Text(LocalizedString.noReviewsText)
-          }
-        } else {
-          ReviewListView(movie: movie)
-        }
-
-      }
+      reviewsSection()
+      actorsSection()
     }
     .onAppear {
       title = movie.title
@@ -68,6 +37,69 @@ struct MovieDetailScreen: View {
     .sheet(isPresented: $showReviewScreen) {
       NavigationStack {
         AddReviewScreen(movie: movie)
+      }
+    }
+  }
+
+  @ViewBuilder
+  private func newMovieTextFields() -> some View {
+    TextField(LocalizedString.title, text: $title)
+    TextField(LocalizedString.year, value: $year, format: .number)
+  }
+
+  @ViewBuilder
+  private func updateMovieButton() -> some View {
+    Button {
+      guard let year = year else { return }
+
+      movie.title = title
+      movie.year = year
+
+      do {
+        try context.save()
+      } catch {
+        print(error.localizedDescription)
+      }
+
+      dismiss()
+
+    } label: {
+      Text(LocalizedString.update)
+    }
+    .buttonStyle(.borderless)
+  }
+
+  @ViewBuilder
+  private func reviewsSection() -> some View {
+    Section(LocalizedString.reviewSectionTitle) {
+      Button {
+        showReviewScreen = true
+      } label: {
+        Image(systemName: "plus")
+          .frame(maxWidth: .infinity, alignment: .trailing)
+      }
+
+      if movie.reviews.isEmpty {
+        ContentUnavailableView {
+          Text(LocalizedString.noReviewsText)
+        }
+      } else {
+        ReviewListView(movie: movie)
+      }
+    }
+  }
+
+  @ViewBuilder
+  private func actorsSection() -> some View {
+    Section(LocalizedString.actorSectionTitle) {
+      if movie.actors.isEmpty {
+        ContentUnavailableView {
+          Text(LocalizedString.noActorsText)
+        }
+      } else {
+        List(movie.actors) { actor in
+          ActorCellView(actor: actor)
+        }
       }
     }
   }
@@ -87,6 +119,12 @@ struct MovieDetailContainerScreen: View {
     .onAppear {
       movie = Movie(title: "Sample", year: 2020)
       context.insert(movie!)
+
+      do {
+        try context.save()
+      } catch {
+        print(error.localizedDescription)
+      }
     }
 
   }

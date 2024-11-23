@@ -25,17 +25,23 @@ struct MovieListView: View {
     List {
       ForEach(movies) { movie in
         NavigationLink(value: movie) {
-          HStack {
-            Text(movie.title)
-            Spacer()
-            Text(movie.year.description)
-          }
+          movieDetail(movie)
         }
       }
       .onDelete(perform: deleteMovie)
     }
     .navigationDestination(for: Movie.self) { movie in
       MovieDetailScreen(movie: movie)
+        .modelContainer(for: [Movie.self, Actor.self, Review.self])
+    }
+  }
+
+  @ViewBuilder
+  private func movieDetail(_ movie: Movie) -> some View {
+    HStack {
+      Text(movie.title)
+      Spacer()
+      Text(movie.year.description)
     }
   }
 }

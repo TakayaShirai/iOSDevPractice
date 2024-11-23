@@ -34,10 +34,3 @@ struct ReviewListView: View {
     }
   }
 }
-
-/*
- #Preview {
- ReviewListView(reviews: [])
- .modelContainer(for: [Review.self, Movie.self])
- }
- */

@@ -9,6 +9,7 @@ struct AddMovieScreen: View {
     static let close = String(localized: "Close")
     static let save = String(localized: "Save")
     static let navigationTitle = String(localized: "Add Movie")
+    static let sectionTitle = String(localized: "Select Actors")
   }
 
   @Environment(\.dismiss) private var dismiss
@@ -17,49 +18,83 @@ struct AddMovieScreen: View {
 
   @State private var title: String = ""
   @State private var year: Int?
+  @State private var selectedActors: Set<Actor> = []
 
   private var isFormValid: Bool {
-    !title.isEmptyOrWhitespace && year != nil
+    !title.isEmptyOrWhitespace && year != nil && !selectedActors.isEmpty
   }
 
   var body: some View {
     Form {
-      TextField(LocalizedString.title, text: $title)
-      TextField(LocalizedString.year, value: $year, format: .number)
+      newMovieTextFields()
+      actorSelectionSection()
     }
     .navigationTitle(LocalizedString.navigationTitle)
     .toolbar {
       ToolbarItem(placement: .topBarLeading) {
-        Button {
-          dismiss()
-        } label: {
-          Text(LocalizedString.close)
-        }
+        dismissalButton()
       }
 
       ToolbarItem(placement: .topBarTrailing) {
-        Button {
-          guard let year = year else { return }
-          let movie = Movie(title: title, year: year)
-
-          // Insert the movie into the SwiftData context.
-          context.insert(movie)
-
-          do {
-            // Save the context to persist the movie.
-            // All changes made to the context since the last save are persisted to the database.
-            try context.save()
-          } catch {
-            print(error.localizedDescription)
-          }
-
-          dismiss()
-        } label: {
-          Text(LocalizedString.save)
-        }
-        .disabled(!isFormValid)
+        saveMovieButton()
       }
     }
+  }
+
+  @ViewBuilder
+  private func newMovieTextFields() -> some View {
+    TextField(LocalizedString.title, text: $title)
+    TextField(LocalizedString.year, value: $year, format: .number)
+  }
+
+  @ViewBuilder
+  private func actorSelectionSection() -> some View {
+    Section(LocalizedString.sectionTitle) {
+      ActorSelectionView(selectedActors: $selectedActors)
+    }
+  }
+
+  @ViewBuilder
+  private func dismissalButton() -> some View {
+    Button {
+      dismiss()
+    } label: {
+      Text(LocalizedString.close)
+    }
+  }
+
+  @ViewBuilder
+  private func saveMovieButton() -> some View {
+    Button {
+      guard let year = year else { return }
+      let movie = Movie(title: title, year: year)
+      movie.actors = Array(selectedActors)
+
+      selectedActors.forEach { actor in
+        actor.movies.append(movie)
+        context.insert(actor)
+
+        do {
+          try context.save()
+        } catch {
+          print(error.localizedDescription)
+        }
+      }
+
+      // Insert the movie into the SwiftData context.
+      context.insert(movie)
+
+      do {
+        try context.save()
+      } catch {
+        print(error.localizedDescription)
+      }
+
+      dismiss()
+    } label: {
+      Text(LocalizedString.save)
+    }
+    .disabled(!isFormValid)
   }
 }
 

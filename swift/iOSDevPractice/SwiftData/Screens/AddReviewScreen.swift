@@ -25,46 +25,55 @@ struct AddReviewScreen: View {
 
   var body: some View {
     Form {
-      TextField(LocalizedString.subjectText, text: $subject)
-      TextField(LocalizedString.bodyText, text: $description)
+      newReviewTextFields()
     }
     .navigationTitle(LocalizedString.navigationTitle)
     .toolbar {
       ToolbarItem(placement: .topBarLeading) {
-        Button {
-          dismiss()
-        } label: {
-          Text(LocalizedString.dismissalButtonText)
-        }
+        dismissalButton()
       }
 
       ToolbarItem(placement: .topBarTrailing) {
-        Button {
-          let review = Review(subject: subject, body: description)
-          review.movie = movie
-
-          context.insert(review)
-
-          do {
-            try context.save()
-            movie.reviews.append(review)
-          } catch {
-            print(error.localizedDescription)
-          }
-
-          dismiss()
-
-        } label: {
-          Text(LocalizedString.saveButtonText)
-        }
-        .disabled(!isFormValid)
+        saveReviewButton()
       }
     }
   }
-}
 
-/*
- #Preview {
- AddReviewScreen()
- }
- */
+  @ViewBuilder
+  private func newReviewTextFields() -> some View {
+    TextField(LocalizedString.subjectText, text: $subject)
+    TextField(LocalizedString.bodyText, text: $description)
+  }
+
+  @ViewBuilder
+  private func dismissalButton() -> some View {
+    Button {
+      dismiss()
+    } label: {
+      Text(LocalizedString.dismissalButtonText)
+    }
+  }
+
+  @ViewBuilder
+  private func saveReviewButton() -> some View {
+    Button {
+      let review = Review(subject: subject, body: description)
+      review.movie = movie
+
+      context.insert(review)
+
+      do {
+        try context.save()
+        movie.reviews.append(review)
+      } catch {
+        print(error.localizedDescription)
+      }
+
+      dismiss()
+
+    } label: {
+      Text(LocalizedString.saveButtonText)
+    }
+    .disabled(!isFormValid)
+  }
+}

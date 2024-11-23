@@ -134,6 +134,12 @@
 		3BE097142CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE097132CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift */; };
 		3BE097162CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE097152CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift */; };
 		3BE83C4B2CC23B6500AB5CB7 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE83C4A2CC23B6300AB5CB7 /* Adapter.swift */; };
+		3BF83C4D2CF17F4900F65750 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF83C4C2CF17F4900F65750 /* Actor.swift */; };
+		3BF83C4F2CF183DF00F65750 /* ActorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF83C4E2CF183DF00F65750 /* ActorListView.swift */; };
+		3BF83C512CF1856500F65750 /* ActorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF83C502CF1856500F65750 /* ActorSelectionView.swift */; };
+		3BF83C532CF195F800F65750 /* ActorCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF83C522CF195F800F65750 /* ActorCellView.swift */; };
+		3BF83C552CF19CAD00F65750 /* ActorDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF83C542CF19CAD00F65750 /* ActorDetailScreen.swift */; };
+		3BF83C572CF19D3A00F65750 /* MovieSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF83C562CF19D3A00F65750 /* MovieSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,6 +283,12 @@
 		3BE097132CB4B075006B2B6F /* InterfaceSegregationPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceSegregationPrinciple.swift; sourceTree = "<group>"; };
 		3BE097152CB4B4AB006B2B6F /* DependencyInversionPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInversionPrinciple.swift; sourceTree = "<group>"; };
 		3BE83C4A2CC23B6300AB5CB7 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
+		3BF83C4C2CF17F4900F65750 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		3BF83C4E2CF183DF00F65750 /* ActorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorListView.swift; sourceTree = "<group>"; };
+		3BF83C502CF1856500F65750 /* ActorSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorSelectionView.swift; sourceTree = "<group>"; };
+		3BF83C522CF195F800F65750 /* ActorCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCellView.swift; sourceTree = "<group>"; };
+		3BF83C542CF19CAD00F65750 /* ActorDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDetailScreen.swift; sourceTree = "<group>"; };
+		3BF83C562CF19D3A00F65750 /* MovieSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -772,6 +784,7 @@
 		3BD9AF462CEBF561008DEEEA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3BF83C4C2CF17F4900F65750 /* Actor.swift */,
 				3BD9AF442CEBF550008DEEEA /* Movie.swift */,
 				3B9001CB2CEDB15400061246 /* Review.swift */,
 			);
@@ -785,6 +798,7 @@
 				3B9001CD2CEDB63100061246 /* AddReviewScreen.swift */,
 				3BD9AF542CEC08B1008DEEEA /* MovieDetailScreen.swift */,
 				3BD9AF4D2CEBFF4C008DEEEA /* MovieListScreen.swift */,
+				3BF83C542CF19CAD00F65750 /* ActorDetailScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -802,6 +816,10 @@
 			children = (
 				3BD9AF522CEC06D5008DEEEA /* MovieListView.swift */,
 				3B9001D02CEDBE3700061246 /* ReviewListView.swift */,
+				3BF83C4E2CF183DF00F65750 /* ActorListView.swift */,
+				3BF83C502CF1856500F65750 /* ActorSelectionView.swift */,
+				3BF83C522CF195F800F65750 /* ActorCellView.swift */,
+				3BF83C562CF19D3A00F65750 /* MovieSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -987,19 +1005,23 @@
 				3B210C572CCC29E000C621C2 /* TextFormatting.swift in Sources */,
 				3B06626C2CDAFB4A00293A5C /* MethodChain.swift in Sources */,
 				3B04294A2C651EB7004CF65B /* AsyncAwaitViewModel.swift in Sources */,
+				3BF83C4F2CF183DF00F65750 /* ActorListView.swift in Sources */,
 				3B7DAD712CB3A9A10016FED7 /* OpenClosedPrinciple.swift in Sources */,
 				3B7550F32C9D11C2008663E5 /* AsyncPublisherViewModel.swift in Sources */,
 				3B7550EE2C9C1B55008663E5 /* MyClassUserInfo.swift in Sources */,
 				3B975D512CC5860000893EA2 /* Composite.swift in Sources */,
 				3BD94ECE2CC07E750060B681 /* Singleton.swift in Sources */,
+				3BF83C532CF195F800F65750 /* ActorCellView.swift in Sources */,
 				3B3314F32C539DBE00986EAA /* OBViewObserver.swift in Sources */,
 				3B44B5FB2CBC55B60067A2C2 /* InnerFactory.swift in Sources */,
 				3BB99ECA2C6DCA4E00204E51 /* AsyncLetViewModel.swift in Sources */,
 				3B875F242C8D090E00B355B5 /* MutatingStruct.swift in Sources */,
 				3B7DAD6E2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift in Sources */,
 				3B7550E62C9C12C6008663E5 /* SendableView.swift in Sources */,
+				3BF83C552CF19CAD00F65750 /* ActorDetailScreen.swift in Sources */,
 				3B8FA5032C789BCD00FE2E71 /* TaskGroupDataManager.swift in Sources */,
 				3BD539382CA78951004CE28D /* MyManagerClass.swift in Sources */,
+				3BF83C572CF19D3A00F65750 /* MovieSelectionView.swift in Sources */,
 				3BCC00912C955BD40063D484 /* BrowseView.swift in Sources */,
 				3B64DDE82CB2625A00E8D2D7 /* AsyncStreamDataManager.swift in Sources */,
 				3B875F262C8D19D600B355B5 /* MyActor.swift in Sources */,
@@ -1034,6 +1056,7 @@
 				3BD94ECB2CBF3A540060B681 /* Prototype.swift in Sources */,
 				3B9AE41E2C6CDB3C00E0ABE1 /* TaskViewModel.swift in Sources */,
 				3BDC44D92C63622D00D11760 /* DownloadImageAsyncImageLoader.swift in Sources */,
+				3BF83C512CF1856500F65750 /* ActorSelectionView.swift in Sources */,
 				3BD9AF4E2CEBFF4C008DEEEA /* MovieListScreen.swift in Sources */,
 				3B8FA5082C78B81000FE2E71 /* ContinuationsViewModel.swift in Sources */,
 				3B8FA5012C789ACB00FE2E71 /* TaskGroupViewModel.swift in Sources */,
@@ -1045,6 +1068,7 @@
 				3BD9AF452CEBF55A008DEEEA /* Movie.swift in Sources */,
 				3BD9AF532CEC06D5008DEEEA /* MovieListView.swift in Sources */,
 				3B9001CE2CEDB63100061246 /* AddReviewScreen.swift in Sources */,
+				3BF83C4D2CF17F4900F65750 /* Actor.swift in Sources */,
 				3B6537C62CE0767C00409179 /* Memento.swift in Sources */,
 				3B01B3BC2CE2EC6200BB95B9 /* Events.swift in Sources */,
 				3B9764202CAE1AEE007FE8BC /* SearchChildView.swift in Sources */,

@@ -76,7 +76,7 @@ class MainViewController: UIViewController {
   @objc func navigateToSwiftDataView() {
     let swiftDataViewController = UIHostingController(
       rootView: NavigationStack {
-        SwiftDataPracticeView().modelContainer(for: [Movie.self])
+        SwiftDataPracticeView().modelContainer(for: [Movie.self, Actor.self, Review.self])
       }
     )
     swiftDataViewController.modalPresentationStyle = .fullScreen

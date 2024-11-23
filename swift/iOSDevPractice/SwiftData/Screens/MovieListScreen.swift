@@ -3,44 +3,129 @@ import SwiftUI
 
 struct MovieListScreen: View {
 
+  private enum LayoutConstant {
+    static let actorBottomSheetFraction: CGFloat = 0.25
+  }
+
   private enum LocalizedString {
+    static let moviesTitle = String(localized: "Movies")
+    static let actorsTitle = String(localized: "Actors")
     static let dismissalButtonTitle = String(localized: "Back")
     static let toolbarTrailingButtonTitle = String(localized: "Add Movie")
+    static let toolbarLeadingButtonTitle = String(localized: "Add Actor")
+    static let textFieldPlaceholder = String(localized: "Actor name")
+    static let saveButtonText = String(localized: "Save")
   }
 
   // Declares a property to fetch an array of `Movie` objects from the SwiftData model storage.
   // The @Query property wrapper automatically fetches and updates the `movies` property
   // whenever the underlying data changes or when the query parameters are modified.
   @Query(sort: \Movie.title, order: .forward) private var movies: [Movie]
+  @Query(sort: \Actor.name, order: .forward) private var actors: [Actor]
 
   @Environment(\.dismiss) private var dismiss
+  @Environment(\.modelContext) private var context
 
   @State private var isAddMoviePresented: Bool = false
+  @State private var isActorPresented: Bool = false
+  @State private var actorName: String = ""
+
+  private func saveActor() {
+    let actor = Actor(name: actorName)
+    context.insert(actor)
+
+    do {
+      try context.save()
+    } catch {
+      print(error.localizedDescription)
+    }
+  }
 
   var body: some View {
-    MovieListView(movies: movies)
-      .toolbar {
-        ToolbarItem(placement: .topBarLeading) {
-          Button {
-            dismiss()
-          } label: {
-            Text(LocalizedString.dismissalButtonTitle)
-          }
-        }
+    VStack(alignment: .leading) {
+      moviesListTitle()
+      MovieListView(movies: movies)
+        .modelContainer(for: [Movie.self, Actor.self, Review.self])
 
-        ToolbarItem(placement: .topBarTrailing) {
-          Button {
-            isAddMoviePresented = true
-          } label: {
-            Text(LocalizedString.toolbarTrailingButtonTitle)
-          }
-        }
+      actorsListTitle()
+      ActorListView(actors: actors)
+        .modelContainer(for: [Movie.self, Actor.self, Review.self])
+    }
+    .padding()
+    .toolbar {
+      ToolbarItem(placement: .topBarLeading) {
+        addActorButton()
       }
-      .sheet(isPresented: $isAddMoviePresented) {
-        NavigationStack {
-          AddMovieScreen()
-        }
+      ToolbarItem(placement: .topBarTrailing) {
+        addMovieButton()
       }
+    }
+    .sheet(isPresented: $isAddMoviePresented) {
+      NavigationStack {
+        AddMovieScreen()
+      }
+    }
+    .sheet(isPresented: $isActorPresented) {
+      NavigationStack {
+        actorBottomSheetTitle()
+        newActorTextField()
+        saveActorButton()
+      }
+    }
+  }
+
+  @ViewBuilder
+  private func moviesListTitle() -> some View {
+    Text(LocalizedString.moviesTitle)
+      .font(.largeTitle)
+  }
+
+  @ViewBuilder
+  private func actorsListTitle() -> some View {
+    Text(LocalizedString.actorsTitle)
+      .font(.largeTitle)
+  }
+
+  @ViewBuilder
+  private func addActorButton() -> some View {
+    Button {
+      isActorPresented = true
+    } label: {
+      Text(LocalizedString.toolbarLeadingButtonTitle)
+    }
+  }
+
+  @ViewBuilder
+  private func addMovieButton() -> some View {
+    Button {
+      isAddMoviePresented = true
+    } label: {
+      Text(LocalizedString.toolbarTrailingButtonTitle)
+    }
+  }
+
+  @ViewBuilder
+  private func actorBottomSheetTitle() -> some View {
+    Text(LocalizedString.toolbarLeadingButtonTitle)
+      .font(.largeTitle)
+  }
+
+  @ViewBuilder
+  private func newActorTextField() -> some View {
+    TextField(LocalizedString.textFieldPlaceholder, text: $actorName)
+      .textFieldStyle(.roundedBorder)
+      .presentationDetents([.fraction(LayoutConstant.actorBottomSheetFraction)])
+      .padding()
+  }
+
+  @ViewBuilder
+  private func saveActorButton() -> some View {
+    Button {
+      isActorPresented = false
+      saveActor()
+    } label: {
+      Text(LocalizedString.saveButtonText)
+    }
   }
 }
 
