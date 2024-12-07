@@ -50,6 +50,7 @@
 		3B7DAD6E2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DAD6C2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift */; };
 		3B7DAD712CB3A9A10016FED7 /* OpenClosedPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DAD702CB3A9A10016FED7 /* OpenClosedPrinciple.swift */; };
 		3B801A3D2CE5F00200BDF440 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B801A3C2CE5EFFF00BDF440 /* State.swift */; };
+		3B8434292D03CDE10093977E /* FilterSelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8434282D03CDE10093977E /* FilterSelectionScreen.swift */; };
 		3B875F1C2C8CF9E200B355B5 /* StructClassActorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B875F1B2C8CF9E200B355B5 /* StructClassActorView.swift */; };
 		3B875F1E2C8CFB1200B355B5 /* MyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B875F1D2C8CFB1200B355B5 /* MyStruct.swift */; };
 		3B875F202C8CFECA00B355B5 /* Myclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B875F1F2C8CFECA00B355B5 /* Myclass.swift */; };
@@ -196,6 +197,7 @@
 		3B7DAD6C2CB3A6640016FED7 /* SingleResponsibilityPrinciple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleResponsibilityPrinciple.swift; sourceTree = "<group>"; };
 		3B7DAD702CB3A9A10016FED7 /* OpenClosedPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenClosedPrinciple.swift; sourceTree = "<group>"; };
 		3B801A3C2CE5EFFF00BDF440 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		3B8434282D03CDE10093977E /* FilterSelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionScreen.swift; sourceTree = "<group>"; };
 		3B875F1B2C8CF9E200B355B5 /* StructClassActorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructClassActorView.swift; sourceTree = "<group>"; };
 		3B875F1D2C8CFB1200B355B5 /* MyStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStruct.swift; sourceTree = "<group>"; };
 		3B875F1F2C8CFECA00B355B5 /* Myclass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Myclass.swift; sourceTree = "<group>"; };
@@ -799,6 +801,7 @@
 				3BD9AF542CEC08B1008DEEEA /* MovieDetailScreen.swift */,
 				3BD9AF4D2CEBFF4C008DEEEA /* MovieListScreen.swift */,
 				3BF83C542CF19CAD00F65750 /* ActorDetailScreen.swift */,
+				3B8434282D03CDE10093977E /* FilterSelectionScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -990,6 +993,7 @@
 			files = (
 				3B44B5FF2CBC5B810067A2C2 /* AbstractFactory.swift in Sources */,
 				3B975D5B2CC7750B00893EA2 /* DynamicDecorator.swift in Sources */,
+				3B8434292D03CDE10093977E /* FilterSelectionScreen.swift in Sources */,
 				3B875F1E2C8CFB1200B355B5 /* MyStruct.swift in Sources */,
 				3BD5392F2CA776B4004CE28D /* StrongWeakReferencesViewModel.swift in Sources */,
 				3B975D5D2CC7751A00893EA2 /* StaticDecorator.swift in Sources */,

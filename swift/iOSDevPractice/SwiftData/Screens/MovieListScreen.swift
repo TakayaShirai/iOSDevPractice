@@ -1,6 +1,16 @@
 import SwiftData
 import SwiftUI
 
+enum Sheets: Identifiable {
+  case addMovie
+  case addActor
+  case showFilter
+
+  var id: Int {
+    hashValue
+  }
+}
+
 struct MovieListScreen: View {
 
   private enum LayoutConstant {
@@ -9,6 +19,7 @@ struct MovieListScreen: View {
 
   private enum LocalizedString {
     static let moviesTitle = String(localized: "Movies")
+    static let filterTitle = String(localized: "Filter")
     static let actorsTitle = String(localized: "Actors")
     static let dismissalButtonTitle = String(localized: "Back")
     static let toolbarTrailingButtonTitle = String(localized: "Add Movie")
@@ -20,15 +31,19 @@ struct MovieListScreen: View {
   // Declares a property to fetch an array of `Movie` objects from the SwiftData model storage.
   // The @Query property wrapper automatically fetches and updates the `movies` property
   // whenever the underlying data changes or when the query parameters are modified.
-  @Query(sort: \Movie.title, order: .forward) private var movies: [Movie]
+  @Query(
+    filter: #Predicate<Movie> { movie in
+      movie.title.contains("Batman")
+    })
+  private var movies: [Movie]
   @Query(sort: \Actor.name, order: .forward) private var actors: [Actor]
 
   @Environment(\.dismiss) private var dismiss
   @Environment(\.modelContext) private var context
 
-  @State private var isAddMoviePresented: Bool = false
-  @State private var isActorPresented: Bool = false
   @State private var actorName: String = ""
+  @State private var activeSheet: Sheets?
+  @State private var filterOption: FilterOption = .none
 
   private func saveActor() {
     let actor = Actor(name: actorName)
@@ -43,8 +58,8 @@ struct MovieListScreen: View {
 
   var body: some View {
     VStack(alignment: .leading) {
-      moviesListTitle()
-      MovieListView(movies: movies)
+      moviesListHeader()
+      MovieListView(filterOption: filterOption)
         .modelContainer(for: [Movie.self, Actor.self, Review.self])
 
       actorsListTitle()
@@ -60,16 +75,20 @@ struct MovieListScreen: View {
         addMovieButton()
       }
     }
-    .sheet(isPresented: $isAddMoviePresented) {
-      NavigationStack {
-        AddMovieScreen()
-      }
-    }
-    .sheet(isPresented: $isActorPresented) {
-      NavigationStack {
-        actorBottomSheetTitle()
-        newActorTextField()
-        saveActorButton()
+    .sheet(item: $activeSheet) { activeSheet in
+      switch activeSheet {
+      case .addMovie:
+        NavigationStack {
+          AddMovieScreen()
+        }
+      case .addActor:
+        NavigationStack {
+          actorBottomSheetTitle()
+          newActorTextField()
+          saveActorButton()
+        }
+      case .showFilter:
+        FilterSelectionScreen(filterOption: $filterOption)
       }
     }
   }
@@ -81,6 +100,22 @@ struct MovieListScreen: View {
   }
 
   @ViewBuilder
+  private func moviesListFilter() -> some View {
+    Button(LocalizedString.filterTitle) {
+      activeSheet = .showFilter
+    }
+  }
+
+  @ViewBuilder
+  private func moviesListHeader() -> some View {
+    HStack(alignment: .firstTextBaseline) {
+      moviesListTitle()
+      Spacer()
+      moviesListFilter()
+    }
+  }
+
+  @ViewBuilder
   private func actorsListTitle() -> some View {
     Text(LocalizedString.actorsTitle)
       .font(.largeTitle)
@@ -89,7 +124,7 @@ struct MovieListScreen: View {
   @ViewBuilder
   private func addActorButton() -> some View {
     Button {
-      isActorPresented = true
+      activeSheet = .addActor
     } label: {
       Text(LocalizedString.toolbarLeadingButtonTitle)
     }
@@ -98,7 +133,7 @@ struct MovieListScreen: View {
   @ViewBuilder
   private func addMovieButton() -> some View {
     Button {
-      isAddMoviePresented = true
+      activeSheet = .addMovie
     } label: {
       Text(LocalizedString.toolbarTrailingButtonTitle)
     }
@@ -121,8 +156,8 @@ struct MovieListScreen: View {
   @ViewBuilder
   private func saveActorButton() -> some View {
     Button {
-      isActorPresented = false
       saveActor()
+      self.activeSheet = nil
     } label: {
       Text(LocalizedString.saveButtonText)
     }

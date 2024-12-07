@@ -9,6 +9,14 @@ final class Movie {
   var title: String
   var year: Int
 
+  var reviewsCount: Int {
+    reviews.count
+  }
+
+  var actorsCount: Int {
+    actors.count
+  }
+
   // - deleteRule: .cascade ensures that if a Movie is deleted, all associated reviews are also deleted.
   // - inverse: \Review.movie specifies that the `movie` property in the `Review` class is the inverse relationship.
   // Inverse relationships enable Core Data to propagate change in both directions when an instance of
