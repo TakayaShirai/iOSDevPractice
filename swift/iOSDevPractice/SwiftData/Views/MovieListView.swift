@@ -18,7 +18,7 @@ struct MovieListView: View {
     case .title(let movieTitle):
       _movies = Query(
         filter: #Predicate { movie in
-          movie.title.contains(movieTitle)
+          movie.name.contains(movieTitle)
         })
     case .reviewsCount(let numberOfReviews):
       _movies = Query(filter: #Predicate { $0.reviews.count >= numberOfReviews })
@@ -64,7 +64,7 @@ struct MovieListView: View {
   private func movieDetail(_ movie: Movie) -> some View {
     HStack(alignment: .firstTextBaseline) {
       VStack(alignment: .leading) {
-        Text(movie.title)
+        Text(movie.name)
         Text("\(LocalizedString.numOfReviewsText) \(movie.reviewsCount)")
           .font(.caption)
         Text("\(LocalizedString.numOfActorsText) \(movie.actorsCount)")

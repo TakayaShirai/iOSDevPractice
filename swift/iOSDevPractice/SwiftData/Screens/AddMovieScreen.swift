@@ -16,12 +16,12 @@ struct AddMovieScreen: View {
   // Environment variable to access the SwiftData model context.
   @Environment(\.modelContext) private var context
 
-  @State private var title: String = ""
+  @State private var name: String = ""
   @State private var year: Int?
   @State private var selectedActors: Set<Actor> = []
 
   private var isFormValid: Bool {
-    !title.isEmptyOrWhitespace && year != nil && !selectedActors.isEmpty
+    !name.isEmptyOrWhitespace && year != nil && !selectedActors.isEmpty
   }
 
   var body: some View {
@@ -43,7 +43,7 @@ struct AddMovieScreen: View {
 
   @ViewBuilder
   private func newMovieTextFields() -> some View {
-    TextField(LocalizedString.title, text: $title)
+    TextField(LocalizedString.title, text: $name)
     TextField(LocalizedString.year, value: $year, format: .number)
   }
 
@@ -67,7 +67,7 @@ struct AddMovieScreen: View {
   private func saveMovieButton() -> some View {
     Button {
       guard let year = year else { return }
-      let movie = Movie(title: title, year: year)
+      let movie = Movie(name: name, year: year)
       movie.actors = Array(selectedActors)
 
       selectedActors.forEach { actor in

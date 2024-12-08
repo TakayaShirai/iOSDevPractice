@@ -3,7 +3,7 @@ import SwiftUI
 
 struct MovieSelectionView: View {
 
-  @Query(sort: \Movie.title, order: .forward) private var movies: [Movie]
+  @Query(sort: \Movie.name, order: .forward) private var movies: [Movie]
   @Binding var selectedMovies: Set<Movie>
 
   var body: some View {
@@ -29,6 +29,6 @@ struct MovieSelectionView: View {
 
   @ViewBuilder
   private func movieTitle(_ movie: Movie) -> some View {
-    Text(movie.title)
+    Text(movie.name)
   }
 }

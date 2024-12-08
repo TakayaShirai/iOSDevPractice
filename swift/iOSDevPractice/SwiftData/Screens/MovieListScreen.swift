@@ -33,7 +33,7 @@ struct MovieListScreen: View {
   // whenever the underlying data changes or when the query parameters are modified.
   @Query(
     filter: #Predicate<Movie> { movie in
-      movie.title.contains("Batman")
+      movie.name.contains("Batman")
     })
   private var movies: [Movie]
   @Query(sort: \Actor.name, order: .forward) private var actors: [Actor]
