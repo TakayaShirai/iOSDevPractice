@@ -6,13 +6,13 @@ import SwiftData
 enum MoviesMigrationPlan: SchemaMigrationPlan {
 
   static var schemas: [any VersionedSchema.Type] {
-    [MoviesSchemaV1.self, MoviesSchemaV2.self, MoviesSchemaV3.self]
+    [MoviesSchemaV1.self, MoviesSchemaV2.self, MoviesSchemaV3.self, MoviesSchemaV4.self]
   }
 
   // The stages property defines the actual steps or stages to migrate between schema versions.
   // It maps a specific migration, in this case, migrateV1ToV2, to handle changes from MoviesSchemaV1 to MoviesSchemaV2
   static var stages: [MigrationStage] {
-    [migrateV1toV2, migrateV2toV3]
+    [migrateV1toV2, migrateV2toV3, migrateV3toV4]
   }
 
   // Defines the custom logic for transitioning data between MoviesSchemaV1 and MoviesSchemaV2.
@@ -42,5 +42,19 @@ enum MoviesMigrationPlan: SchemaMigrationPlan {
 
   static let migrateV2toV3 = MigrationStage.lightweight(
     fromVersion: MoviesSchemaV2.self, toVersion: MoviesSchemaV3.self)
+
+  static let migrateV3toV4 = MigrationStage.custom(
+    fromVersion: MoviesSchemaV3.self, toVersion: MoviesSchemaV4.self,
+    willMigrate: { context in
+      // Retrieves all Movie objects from the database using FetchDescriptor.
+      guard let movies = try? context.fetch(FetchDescriptor<Movie>()) else { return }
+
+      for movie in movies {
+        movie.genreId = 1
+      }
+
+      try? context.save()
+
+    }, didMigrate: nil)
 
 }

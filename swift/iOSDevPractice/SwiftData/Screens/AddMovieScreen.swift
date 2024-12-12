@@ -10,12 +10,14 @@ struct AddMovieScreen: View {
     static let save = String(localized: "Save")
     static let navigationTitle = String(localized: "Add Movie")
     static let sectionTitle = String(localized: "Select Actors")
+    static let genreSelectionTitle = String(localized: "Select Genre")
   }
 
   @Environment(\.dismiss) private var dismiss
   // Environment variable to access the SwiftData model context.
   @Environment(\.modelContext) private var context
 
+  @State private var genre: Genre = .action
   @State private var name: String = ""
   @State private var year: Int?
   @State private var selectedActors: Set<Actor> = []
@@ -26,6 +28,7 @@ struct AddMovieScreen: View {
 
   var body: some View {
     Form {
+      genreSelectionSection()
       newMovieTextFields()
       actorSelectionSection()
     }
@@ -39,6 +42,16 @@ struct AddMovieScreen: View {
         saveMovieButton()
       }
     }
+  }
+
+  @ViewBuilder
+  private func genreSelectionSection() -> some View {
+    Picker(LocalizedString.genreSelectionTitle, selection: $genre) {
+      ForEach(Genre.allCases) { genre in
+        Text(genre.title).tag(genre)
+      }
+    }
+    .pickerStyle(.segmented)
   }
 
   @ViewBuilder
@@ -67,7 +80,8 @@ struct AddMovieScreen: View {
   private func saveMovieButton() -> some View {
     Button {
       guard let year = year else { return }
-      let movie = Movie(name: name, year: year)
+
+      let movie = Movie(name: name, year: year, genre: genre)
       movie.actors = Array(selectedActors)
 
       selectedActors.forEach { actor in

@@ -121,5 +121,44 @@ enum MoviesSchemaV3: VersionedSchema {
       self.year = year
     }
   }
+}
 
+enum MoviesSchemaV4: VersionedSchema {
+  static var versionIdentifier: Schema.Version = Schema.Version(4, 0, 0)
+
+  static var models: [any PersistentModel.Type] {
+    [Movie.self]
+  }
+
+  @Model
+  final class Movie {
+
+    @Attribute(.unique, originalName: "title") var name: String
+    var year: Int
+    var genreId: Int
+
+    var genre: Genre {
+      Genre(rawValue: genreId)!
+    }
+
+    var reviewsCount: Int {
+      reviews.count
+    }
+
+    var actorsCount: Int {
+      actors.count
+    }
+
+    @Relationship(deleteRule: .cascade, inverse: \Review.movie)
+    var reviews: [Review] = []
+
+    @Relationship(deleteRule: .nullify, inverse: \Actor.movies)
+    var actors: [Actor] = []
+
+    init(name: String, year: Int, genre: Genre) {
+      self.name = name
+      self.year = year
+      self.genreId = genre.id
+    }
+  }
 }

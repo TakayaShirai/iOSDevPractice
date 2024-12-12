@@ -11,6 +11,14 @@ enum Sheets: Identifiable {
   }
 }
 
+struct FilterSelectionConfig {
+  var movieTitle: String = ""
+  var numOfReviews: Int?
+  var numOfActors: Int?
+  var genre: Genre = .action
+  var filterOption: FilterOption = .none
+}
+
 struct MovieListScreen: View {
 
   private enum LayoutConstant {
@@ -26,6 +34,7 @@ struct MovieListScreen: View {
     static let toolbarLeadingButtonTitle = String(localized: "Add Actor")
     static let textFieldPlaceholder = String(localized: "Actor name")
     static let saveButtonText = String(localized: "Save")
+    static let clearFilterButtonText = String(localized: "Clear Filters")
   }
 
   // Declares a property to fetch an array of `Movie` objects from the SwiftData model storage.
@@ -43,7 +52,8 @@ struct MovieListScreen: View {
 
   @State private var actorName: String = ""
   @State private var activeSheet: Sheets?
-  @State private var filterOption: FilterOption = .none
+
+  @State private var filterSelectionConfig = FilterSelectionConfig()
 
   private func saveActor() {
     let actor = Actor(name: actorName)
@@ -59,7 +69,8 @@ struct MovieListScreen: View {
   var body: some View {
     VStack(alignment: .leading) {
       moviesListHeader()
-      MovieListView(filterOption: filterOption)
+      clearFilterButton()
+      MovieListView(filterOption: filterSelectionConfig.filterOption)
         .modelContainer(for: [Movie.self, Actor.self, Review.self])
 
       actorsListTitle()
@@ -88,7 +99,7 @@ struct MovieListScreen: View {
           saveActorButton()
         }
       case .showFilter:
-        FilterSelectionScreen(filterOption: $filterOption)
+        FilterSelectionScreen(filterSelectionConfig: $filterSelectionConfig)
       }
     }
   }
@@ -103,6 +114,13 @@ struct MovieListScreen: View {
   private func moviesListFilter() -> some View {
     Button(LocalizedString.filterTitle) {
       activeSheet = .showFilter
+    }
+  }
+
+  @ViewBuilder
+  private func clearFilterButton() -> some View {
+    Button(LocalizedString.clearFilterButtonText) {
+      filterSelectionConfig = FilterSelectionConfig()
     }
   }
 
@@ -167,6 +185,6 @@ struct MovieListScreen: View {
 #Preview {
   NavigationStack {
     MovieListScreen()
-      .modelContainer(for: [Movie.self])
+      .modelContainer(for: [Movie.self, Review.self, Actor.self], inMemory: true)
   }
 }

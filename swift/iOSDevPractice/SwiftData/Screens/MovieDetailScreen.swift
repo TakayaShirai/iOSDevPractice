@@ -117,7 +117,7 @@ struct MovieDetailContainerScreen: View {
       }
     }
     .onAppear {
-      movie = Movie(name: "Sample", year: 2020)
+      movie = Movie(name: "Sample", year: 2020, genre: .action)
       context.insert(movie!)
 
       do {

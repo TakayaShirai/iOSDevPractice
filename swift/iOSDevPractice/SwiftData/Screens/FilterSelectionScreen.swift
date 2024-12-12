@@ -4,6 +4,7 @@ enum FilterOption {
   case title(String)
   case reviewsCount(Int)
   case actorsCount(Int)
+  case genre(Genre)
   case none
 }
 
@@ -17,29 +18,28 @@ struct FilterSelectionScreen: View {
     static let numOfActorsFilterTitle = String(localized: "Filter by number of actors")
     static let numOfActorsTitlePlaceholder = String(localized: "Number of actors")
     static let searchButtonTitle = String(localized: "Search")
+    static let genreFilterTitle = String(localized: "Filter by genre")
+    static let genreSelectionTitle = String(localized: "Select a genre")
   }
 
   @Environment(\.dismiss) private var dismiss
-  @State private var movieTitle: String = ""
-  @State private var numOfReviews: Int?
-  @State private var numOfActors: Int?
-
-  @Binding var filterOption: FilterOption
+  @Binding var filterSelectionConfig: FilterSelectionConfig
 
   var body: some View {
     Form {
       titleFilterSection()
       numOfReviewsFilterSection()
       numOfActorsFilterSection()
+      genreFilterSection()
     }
   }
 
   @ViewBuilder
   private func titleFilterSection() -> some View {
     Section(LocalizedString.titleFilterTitle) {
-      TextField(LocalizedString.movieTitlePlaceholder, text: $movieTitle)
+      TextField(LocalizedString.movieTitlePlaceholder, text: $filterSelectionConfig.movieTitle)
       Button(LocalizedString.searchButtonTitle) {
-        filterOption = .title(movieTitle)
+        filterSelectionConfig.filterOption = .title(filterSelectionConfig.movieTitle)
         dismiss()
       }
     }
@@ -48,10 +48,13 @@ struct FilterSelectionScreen: View {
   @ViewBuilder
   private func numOfReviewsFilterSection() -> some View {
     Section(LocalizedString.numOfReviewsFilterTitle) {
-      TextField(LocalizedString.numOfReviewsTitlePlaceholder, value: $numOfReviews, format: .number)
-        .keyboardType(.numberPad)
+      TextField(
+        LocalizedString.numOfReviewsTitlePlaceholder, value: $filterSelectionConfig.numOfReviews,
+        format: .number
+      )
+      .keyboardType(.numberPad)
       Button(LocalizedString.searchButtonTitle) {
-        filterOption = .reviewsCount(numOfReviews ?? 1)
+        filterSelectionConfig.filterOption = .reviewsCount(filterSelectionConfig.numOfReviews ?? 1)
         dismiss()
       }
     }
@@ -60,10 +63,28 @@ struct FilterSelectionScreen: View {
   @ViewBuilder
   private func numOfActorsFilterSection() -> some View {
     Section(LocalizedString.numOfActorsFilterTitle) {
-      TextField(LocalizedString.numOfActorsTitlePlaceholder, value: $numOfActors, format: .number)
-        .keyboardType(.numberPad)
+      TextField(
+        LocalizedString.numOfActorsTitlePlaceholder, value: $filterSelectionConfig.numOfActors,
+        format: .number
+      )
+      .keyboardType(.numberPad)
       Button(LocalizedString.searchButtonTitle) {
-        filterOption = .actorsCount(numOfActors ?? 1)
+        filterSelectionConfig.filterOption = .actorsCount(filterSelectionConfig.numOfActors ?? 1)
+        dismiss()
+      }
+    }
+  }
+
+  @ViewBuilder
+  private func genreFilterSection() -> some View {
+    Section(LocalizedString.genreFilterTitle) {
+      Picker(LocalizedString.genreSelectionTitle, selection: $filterSelectionConfig.genre) {
+        ForEach(Genre.allCases) { genre in
+          Text(genre.title).tag(genre)
+        }
+      }
+      .onChange(of: filterSelectionConfig.genre) { oldValue, newValue in
+        filterSelectionConfig.filterOption = .genre(newValue)
         dismiss()
       }
     }
@@ -71,5 +92,5 @@ struct FilterSelectionScreen: View {
 }
 
 #Preview {
-  FilterSelectionScreen(filterOption: .constant(.title("Batman")))
+  FilterSelectionScreen(filterSelectionConfig: .constant(FilterSelectionConfig()))
 }
